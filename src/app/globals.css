@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --h-nav: 3em;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+  background-color: theme('colors.primary.700');
+}
+
+@layer utilities {
+  .text-17xl {
+    font-size: 16rem;
+    line-height: 1;
+  }
+  .mt-nav {
+    margin-top: var(--h-nav);
+  }
+  .h-nav {
+    height: var(--h-nav);
+  }
+  .h-svh-nav {
+    height: calc(100svh - var(--h-nav));
+  }
+  .h-lvh-nav {
+    height: calc(100lvh - var(--h-nav));
+  }
+  .h-lvh-svh {
+    height: calc(100lvh - 100svh);
+    overflow: hidden;
+  }
+  .transition-width {
+    transition-property: width;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  .text-shadow {
+    text-shadow: 1px 1px 2px black;
+  }
+}
