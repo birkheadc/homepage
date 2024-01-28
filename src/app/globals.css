@@ -24,10 +24,10 @@ html {
     height: var(--h-nav);
   }
   .h-svh-nav {
-    height: calc(100svh - var(--h-nav));
+    min-height: calc(100svh - var(--h-nav));
   }
   .h-lvh-nav {
-    height: calc(100lvh - var(--h-nav));
+    min-height: calc(100lvh - var(--h-nav));
   }
   .h-lvh-svh {
     height: calc(100lvh - 100svh);
@@ -43,5 +43,17 @@ html {
   }
   .-bg-left-bottom-100 {
     background-position: left -125px bottom;
+  }
+  .responsive-square {
+    width: 50%;
+    margin: auto;
+  }
+  .responsive-square::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  .f {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }

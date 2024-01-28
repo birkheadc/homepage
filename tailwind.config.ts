@@ -9,7 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+      animation: {
+        'spin': 'spin 2s linear infinite'
+      },
+      transitionTimingFunction: {
+        'bounce': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+      }
     },
     colors: {
       'black': colors.black,
