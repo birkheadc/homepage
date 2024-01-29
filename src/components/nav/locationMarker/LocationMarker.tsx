@@ -56,9 +56,9 @@ export default function LocationMarker(props: LocationMarkerProps): JSX.Element 
   }, []);
 
   return (
-    <div className='absolute w-full h-full pointer-events-none bg-primary-900'>
+    <div className='absolute w-full h-full pointer-events-none'>
       <div className='absolute z-10 h-full transition-width mix-blend-screen' style={{ left: `${offset * 100}%`, width: `${width * 100}%` }}>
-        <div className='w-full h-full border-b-4 border-primary-100 shadow-sm bg-gradient-to-br from-primary-700 to-primary-950'>
+        <div className='w-full h-full border-b-4 shadow-sm bg-gradient-to-br'>
 
         </div>
       </div>
