@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <main>
       <h1 className='text-3xl font-bold text-center text-primary-1'>hello world</h1>
+      <p className='text-xl text-primary-1'>Try changing colors!</p>
     </main>
   );
 }
