@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import PrimaryNav from "@/components/nav/PrimaryNav";
-import Footer from "../components/footer/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import Frame from "../components/frame/Frame";
+import Providers from "@/contexts/providers/Providers";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
@@ -21,12 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <PrimaryNav />
-        {children}
-        {/* <Footer /> */}
-      </body>
-    </html>
+    <Providers>
+      <html lang="en" data-theme='a'>
+        <Frame>
+          {children}
+        </Frame>
+      </html>
+    </Providers>
   );
 }

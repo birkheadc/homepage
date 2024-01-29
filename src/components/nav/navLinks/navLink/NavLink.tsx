@@ -40,7 +40,7 @@ export default function NavLink(props: NavLinkProps): JSX.Element {
   
   return (
     <li className='' style={{ width: `${width * 100}%` }}>
-      <Link className='text-primary-100 flex items-center justify-center h-full gap-4 p-2 transition-colors hover:text-secondary-400' href={`#${props.id}`}>{props.children}</Link>
+      <Link className='flex items-center justify-center h-full gap-4 p-2 transition-colors hover:text-secondary-400' href={`#${props.id}`}>{props.children}</Link>
     </li>
   );
 }
