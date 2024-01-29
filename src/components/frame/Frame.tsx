@@ -22,7 +22,7 @@ export default function Frame(props: FrameProps): JSX.Element {
   const CLASS_NAMES = {
     common: {
       body: utils.cn(styles.body, 'h-svh bg-gradient-to-br from-neutral-100 to-neutral-300 overflow-hidden'),
-      first: utils.cn(styles.first, 'flex flex-col items-center justify-start h-full gap-4 m-auto  rounded-5xl bg-gradient-to-br from-neutral-300 to-neutral-500 w-fit'),
+      first: utils.cn(styles.first, 'flex flex-col items-center justify-start h-full gap-4 m-auto  rounded-5xl bg-gradient-to-br from-neutral-300 to-neutral-500 w-fit shadow-3xl'),
       second: utils.cn(styles.second, 'bg-gradient-to-br from-neutral-700 to-neutral-900 rounded-3xl'),
       third: utils.cn(styles.third, 'w-full h-full p-4 bg-primary-3 rounded-2xl shadow-inner'),
       fourth: utils.cn(styles.fourth, 'transition-all ease-in-out')
