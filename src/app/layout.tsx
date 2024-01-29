@@ -13,6 +13,8 @@ export const viewport: Viewport = {
   
 }
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,9 +23,11 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en" data-theme='a'>
-        <Frame>
-          {children}
-        </Frame>
+        <body className={inter.className}>
+          <Frame>
+            {children}
+          </Frame>
+        </body>
       </html>
     </Providers>
   );

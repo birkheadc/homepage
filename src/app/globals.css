@@ -26,10 +26,10 @@ html {
     width: min(90lvh, 90lvw);
   }
   .h-90 {
-    height: 90svh;
+    height: 100svh;
   }
   .w-90 {
-    width: 90lvw;
+    width: 100lvw;
   }
   .h-lvh-svh {
     height: calc(100lvh - 100svh);
@@ -43,5 +43,8 @@ html {
     content: '';
     display: block;
     padding-top: 100%;
+  }
+  .delay-900 {
+    transition-delay: 900ms;
   }
 }

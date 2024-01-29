@@ -15,6 +15,17 @@ const config: Config = {
       },
       transitionTimingFunction: {
         'bounce': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+      },
+      boxShadow: {
+        'inner': 'inset 4px 4px 8px black',
+        '3d': '12px 0px 0px #4f4f4f, 24px 12px 24px black',
+        '3xl': '8px 8px 16px black'
+      },
+      transitionDelay: {
+        '600': '600ms'
+      },
+      borderRadius: {
+        '5xl': '3rem'
       }
     },
     colors: {
