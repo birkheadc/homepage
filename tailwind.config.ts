@@ -26,9 +26,21 @@ const config: Config = {
       },
       borderRadius: {
         '5xl': '3rem'
+      },
+      screens: {
+        'short': { 'raw': '(max-height: 500px)' }
+      },
+      width: {
+        'double': '200%'
+      },
+      height: {
+        'double': '200%'
       }
     },
     colors: {
+      'white': '#ffffff',
+      'gray': '#888888',
+      'black': '#000000',
       'berry': {
         '50': '#fff0f2',
         '100': '#ffe3e7',

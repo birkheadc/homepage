@@ -26,7 +26,7 @@ html {
     width: min(90lvh, 90lvw);
   }
   .h-90 {
-    height: 100svh;
+    height: 90svh;
   }
   .w-90 {
     width: 100lvw;
