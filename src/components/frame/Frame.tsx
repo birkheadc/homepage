@@ -40,21 +40,21 @@ export default function Frame(props: FrameProps): JSX.Element {
   const CLASS_NAMES = {
     common: {
       body: utils.cn(styles.body, 'h-svh bg-gradient-to-br from-neutral-100 to-neutral-300 overflow-hidden'),
-      first: utils.cn(styles.first, 'flex flex-col items-center justify-start h-full gap-4 m-auto rounded-5xl bg-gradient-to-br from-neutral-300 to-neutral-500 w-fit shadow-3xl', colorStyle),
+      first: utils.cn(styles.first, 'flex short:w-full short:flex-row flex-col items-center justify-start h-full gap-4 m-auto rounded-5xl bg-gradient-to-br from-neutral-300 to-neutral-500 w-fit shadow-3xl', colorStyle),
       second: utils.cn(styles.second, 'bg-gradient-to-br from-neutral-700 to-neutral-900 rounded-3xl border-2 border-neutral-950'),
       third: utils.cn(styles.third, 'w-full h-full p-4 bg-primary-3 rounded-2xl shadow-inner overflow-hidden'),
       fourth: utils.cn(styles.fourth, 'p-6 w-full h-full transition-all ease-in-out origin-top overflow-y-auto duration-300')
     },
     zoomedIn: {
       body: 'p-0',
-      first: 'p-2 px-0 rounded-none gap-1',
+      first: 'p-2 px-0 rounded-none short:rounded-r-5xl gap-1 short:w-90',
       second: 'p-2 h-90 w-90 px-0 rounded-none',
       third: 'rounded-none p-0 py-1',
       fourth: 'opacity-100 delay-700'
     },
     zoomedOut: {
       body: 'p-4',
-      first: 'p-8 short:flex-row',
+      first: 'p-8',
       second: 'p-6 hw-70 lg:hw-50',
       third: 'p-0',
       fourth: 'overflow-y-hidden opacity-0'
@@ -77,7 +77,7 @@ export default function Frame(props: FrameProps): JSX.Element {
             { !isZoomedIn && <Logo /> }
             <div className={classNames.fourth}>
               { props.children }
-            L</div>
+            </div>
           </div>
         </div>
         <button onClick={toggleZoom}>{ isZoomedIn ? <ChevronUpIcon width={'2rem'} /> : <ChevronDownIcon width={'2rem'} /> }</button>

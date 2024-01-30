@@ -14,16 +14,16 @@ export default function Controls(props: ControlsProps): JSX.Element {
   const { getTheme, setTheme } = useTheme();
 
   const CLASS_NAME = {
-    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start w-full p-4',
-    zoomedIn: 'h-0 p-0',
-    zoomedOut: 'h-2/6'
+    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-0',
+    zoomedIn: 'h-0 p-0 w-0',
+    zoomedOut: 'h-2/6 w-full'
   }
 
   const className = isZoomedIn ? utils.cn(CLASS_NAME.common, CLASS_NAME.zoomedIn) : utils.cn(CLASS_NAME.common, CLASS_NAME.zoomedOut);
 
   return (
     <div className={className}>
-      <div className='flex flex-row justify-between w-full gap-4'>
+      <div className='flex flex-row justify-between w-full gap-2'>
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-neutral-500 to-neutral-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.GRAY)}></button>
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-berry-500 to-berry-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.BERRY)}></button>
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-grape-500 to-grape-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.GRAPE)}></button>
@@ -31,7 +31,7 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-dandelion-500 to-dandelion-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.DANDELION)}></button>
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-teal-500 to-teal-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.TEAL)}></button>
       </div>
-      <div className='flex flex-row w-full gap-2'>
+      <div className='flex flex-row w-full gap-1'>
         <button data-theme='a' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('a')}></button>
         <button data-theme='b' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('b')}></button>
         <button data-theme='c' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('c')}></button>

@@ -17,7 +17,7 @@
   animation-delay: 600ms;
   animation-fill-mode: forwards;
   opacity: 0;
-  background: linear-gradient(to right, black 25%, theme('colors.berry.500'), theme('colors.grape.500'), theme('colors.kiwi.500'), theme('colors.dandelion.500'), theme('colors.teal.500'), black 75%);
+  background: linear-gradient(to right, hsl(var(--twc-primary-1)) 25%, theme('colors.berry.500'), theme('colors.grape.500'), theme('colors.kiwi.500'), theme('colors.dandelion.500'), theme('colors.teal.500'), hsl(var(--twc-primary-1)) 75%);
   background-repeat: no-repeat;
   background-size: 55%;
   background-position: 0%;
