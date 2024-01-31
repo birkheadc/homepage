@@ -14,7 +14,7 @@ export default function Controls(props: ControlsProps): JSX.Element {
   const { getTheme, setTheme } = useTheme();
 
   const CLASS_NAME = {
-    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-0',
+    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-1',
     zoomedIn: 'h-0 p-0 w-0',
     zoomedOut: 'h-2/6 w-full'
   }

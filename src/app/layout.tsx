@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 import Frame from "../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
+import utils from "../utils";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
@@ -13,7 +14,7 @@ export const viewport: Viewport = {
   
 }
 
-const inter = Inter({ subsets: ["latin"] });
+const vt323 = VT323({ subsets: ['latin'], weight: '400' });
 
 export default function RootLayout({
   children,
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en" data-theme='a'>
-        <body className={inter.className}>
+        <body className={vt323.className}>
           <Frame>
             {children}
           </Frame>

@@ -25,6 +25,9 @@ html {
     height: min(90lvh, 90lvw);
     width: min(90lvh, 90lvw);
   }
+  .h-70 {
+    height: 70svh;
+  }
   .h-80 {
     height: 80svh
   }

@@ -1,19 +1,7 @@
-.logo {
-  /* opacity: 0;
-  animation-name: logo;
-  animation-duration: 600ms;
-  animation-fill-mode: forwards; */
-}
-
-@keyframes logo {
-  from { opacity: 0; }
-  to { opacity: 100; }
-}
-
 .text {
   position: absolute;
   animation-name: text;
-  animation-duration: 2400ms;
+  animation-duration: 3600ms;
   animation-delay: 600ms;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -28,15 +16,7 @@
 }
 
 @keyframes text {
-  from { opacity: 0; }
-  25% { opacity: 100; background-position: 0%; }
-  100% { opacity: 100; background-position: 100%; }
-}
-
-.background {
-
-}
-
-@keyframes background {
- 
+  0% { opacity: 0; }
+  20% { opacity: 1; background-position: 0%; }
+  100% { opacity: 1; background-position: 100%; }
 }
