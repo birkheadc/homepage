@@ -11,7 +11,8 @@ import useSkin from '../../hooks/skin/useSkin';
 import useTheme from '../../hooks/theme/useTheme';
 
 type FrameProps = {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  logo: React.ReactNode
 }
 
 export default function Frame(props: FrameProps): JSX.Element {
@@ -72,7 +73,7 @@ export default function Frame(props: FrameProps): JSX.Element {
       <div className={classNames.first}>
         <div className={classNames.second}>
           <div className={classNames.third}>
-            { !isZoomedIn && <Logo /> }
+            { !isZoomedIn && props.logo }
             <div className={classNames.fourth}>
               { props.children }
             </div>
