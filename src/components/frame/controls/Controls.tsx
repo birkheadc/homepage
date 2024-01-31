@@ -3,7 +3,6 @@ import { FrameContext } from '../../../contexts/frame/FrameContext';
 import utils from '../../../utils';
 import { FrameColor } from '@/types/frameColor/frameColor';
 import useTheme from '@/hooks/theme/useTheme';
-import useLanguage from '../../../hooks/language/useLanguage';
 
 interface ControlsProps {
   changeColor: (color: FrameColor) => void
@@ -12,8 +11,7 @@ interface ControlsProps {
 export default function Controls(props: ControlsProps): JSX.Element {
 
   const { isZoomedIn } = React.useContext(FrameContext);
-  const { theme, changeTheme } = useTheme();
-  const { changeLanguage } = useLanguage();
+  const { changeTheme } = useTheme();
 
   const CLASS_NAME = {
     common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-1',
@@ -49,8 +47,8 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('m')}></button>
       </div>
       <div className='flex flex-row w-full gap-1'>
-        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => changeLanguage('en')}>en</button>
-        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => changeLanguage('jp')}>jp</button>
+        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => {}}>en</button>
+        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => {}}>jp</button>
       </div>
     </div>
   );

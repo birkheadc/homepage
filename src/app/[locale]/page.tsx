@@ -1,6 +1,6 @@
 import * as React from 'react';
 import IntroductionSection from './sections/introduction/IntroductionSection';
-import Section from '../components/section/Section';
+import Section from '../../components/section/Section';
 
 export default function Home() {
   return (
