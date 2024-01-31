@@ -1,6 +1,6 @@
 .text {
   position: absolute;
-  animation: fade 300ms 600ms forwards, rainbow 3600ms 900ms infinite;
+  animation: fade 300ms 600ms forwards, rainbow 3600ms 900ms forwards;
   /* animation-name: text;
   animation-duration: 3600ms;
   animation-delay: 600ms;
