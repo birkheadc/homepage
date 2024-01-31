@@ -35,7 +35,7 @@ const config: Config = {
       },
       height: {
         'double': '200%'
-      }
+      },
     },
     colors: {
       'white': '#ffffff',

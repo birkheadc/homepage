@@ -13,36 +13,13 @@ html {
 }
 
 @layer utilities {
-  .hw-50 {
+  .hw-square-50 {
     height: min(50lvh, 50lvw);
     width: min(50lvh, 50lvw);
   }
-  .hw-70 {
+  .hw-square-70 {
     height: min(70lvh, 70lvw);
     width: min(70lvh, 70lvw);
-  }
-  .hw-90 {
-    height: min(90lvh, 90lvw);
-    width: min(90lvh, 90lvw);
-  }
-  .h-70 {
-    height: 70svh;
-  }
-  .h-80 {
-    height: 80svh
-  }
-  .h-90 {
-    height: 90svh;
-  }
-  .w-80 {
-    width: 100lvw;
-  }
-  .w-90 {
-    width: 100lvw;
-  }
-  .h-lvh-svh {
-    height: calc(100lvh - 100svh);
-    overflow: hidden;
   }
   .responsive-square {
     width: 50%;
@@ -52,8 +29,5 @@ html {
     content: '';
     display: block;
     padding-top: 100%;
-  }
-  .delay-900 {
-    transition-delay: 900ms;
   }
 }
