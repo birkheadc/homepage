@@ -43,15 +43,15 @@ export default function Frame(props: FrameProps): JSX.Element {
     },
     zoomedIn: {
       body: 'p-0',
-      first: 'p-2 px-0 rounded-none short:rounded-r-5xl gap-1 short:w-90',
-      second: 'p-2 h-90 w-90 px-0 rounded-none',
+      first: 'p-2 px-0 rounded-none short:rounded-r-5xl gap-1 short:w-[100lvw]',
+      second: 'p-2 h-[90svh] w-[100lvw] px-0 rounded-none',
       third: 'rounded-none p-0 py-1',
       fourth: 'opacity-1 delay-700'
     },
     zoomedOut: {
       body: 'p-4',
       first: 'p-8',
-      second: 'p-6 hw-70 lg:hw-50',
+      second: 'p-6 hw-square-70 lg:hw-square-50',
       third: 'p-0',
       fourth: 'overflow-y-hidden opacity-0'
     }
