@@ -3,7 +3,6 @@ import { VT323 } from "next/font/google";
 import "./globals.css";
 import Frame from "../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
-import utils from "../utils";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
