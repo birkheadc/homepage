@@ -1,13 +1,22 @@
-export default function useTheme(): { getTheme: () => string, getThemeColors: () => string[], setTheme: (theme: string) => void } {
-  const getTheme = (): string => {
-    const html = document.documentElement;
-    return html.getAttribute('data-theme') ?? '';
-  }
+'use client';
 
-  const setTheme = (theme: string) => {
+import * as React from 'react';
+
+export default function useTheme(): { theme: string, getThemeColors: () => string[], changeTheme: (theme: string) => void } {
+
+  const [ theme, setTheme ] = React.useState<string>('');
+
+  React.useEffect(function retrieveLocalSettings() {
+    const theme = localStorage.getItem(THEME_KEY);
+    if (theme) changeTheme(theme);
+  }, []);
+
+  const changeTheme = (theme: string) => {
     const html = document.documentElement;
     html.setAttribute('data-theme', theme);
     window.dispatchEvent(new Event('onchangetheme'));
+    localStorage.setItem(THEME_KEY, theme);
+    setTheme(theme);
   }
 
   const getThemeColors = (): string[] => {
@@ -23,5 +32,7 @@ export default function useTheme(): { getTheme: () => string, getThemeColors: ()
     return colors;
   }
 
-  return { getTheme, getThemeColors, setTheme }
+  return { theme, getThemeColors, changeTheme }
 }
+
+const THEME_KEY = 'theme';

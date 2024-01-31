@@ -11,7 +11,7 @@ interface ControlsProps {
 export default function Controls(props: ControlsProps): JSX.Element {
 
   const { isZoomedIn } = React.useContext(FrameContext);
-  const { getTheme, setTheme } = useTheme();
+  const { theme, changeTheme } = useTheme();
 
   const CLASS_NAME = {
     common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-1',
@@ -32,19 +32,19 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button className='flex-grow h-6 border-2 bg-gradient-to-br from-teal-500 to-teal-700 hover:outline outline-neutral-200' onClick={() => props.changeColor(FrameColor.TEAL)}></button>
       </div>
       <div className='flex flex-row w-full gap-1'>
-        <button data-theme='a' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('a')}></button>
-        <button data-theme='b' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('b')}></button>
-        <button data-theme='c' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('c')}></button>
-        <button data-theme='d' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('d')}></button>
-        <button data-theme='e' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('e')}></button>
-        <button data-theme='f' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('f')}></button>
-        <button data-theme='g' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('g')}></button>
-        <button data-theme='h' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('h')}></button>
-        <button data-theme='i' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('i')}></button>
-        <button data-theme='j' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('j')}></button>
-        <button data-theme='k' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('k')}></button>
-        <button data-theme='l' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('l')}></button>
-        <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => setTheme('m')}></button>
+        <button data-theme='a' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('a')}></button>
+        <button data-theme='b' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('b')}></button>
+        <button data-theme='c' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('c')}></button>
+        <button data-theme='d' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('d')}></button>
+        <button data-theme='e' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('e')}></button>
+        <button data-theme='f' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('f')}></button>
+        <button data-theme='g' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('g')}></button>
+        <button data-theme='h' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('h')}></button>
+        <button data-theme='i' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('i')}></button>
+        <button data-theme='j' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('j')}></button>
+        <button data-theme='k' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('k')}></button>
+        <button data-theme='l' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('l')}></button>
+        <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('m')}></button>
       </div>
     </div>
   );
