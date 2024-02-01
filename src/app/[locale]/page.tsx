@@ -1,6 +1,7 @@
 import * as React from 'react';
 import IntroductionSection from './sections/introduction/IntroductionSection';
 import Section from '../../components/section/Section';
+import ProjectsSection from './sections/projects/ProjectsSection';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <IntroductionSection />
       </Section>
       <Section>
-        <h2>section 2</h2>
+        <ProjectsSection />
       </Section>
       <Section>
         <h2>section 3</h2>
