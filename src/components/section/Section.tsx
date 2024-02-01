@@ -6,7 +6,7 @@ type SectionProps = {
 
 export default function Section(props: SectionProps): JSX.Element {
   return (
-    <section className='border-2 w-full h-[80svh] short:h-[70svh]'>
+    <section className='border-2 border-primary-1 bg-primary-3 w-full h-[80svh] short:h-[70svh]'>
       { props.children }
     </section>
   );

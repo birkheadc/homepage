@@ -1,5 +1,17 @@
 {
   "Logo": {
     "subtext": "personal site of Colby Birkhead"
+  },
+  "IntroductionSection": {
+    "header": {
+      "thisIs": "this is",
+      "colby": "colby"
+    },
+    "span-1": "he makes stuff",
+    "span-2": {
+      "onThe": "on the",
+      "internet": "internet",
+      "ofAllThings": "of all things"
+    }
   }
 }

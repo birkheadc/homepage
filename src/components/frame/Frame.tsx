@@ -19,7 +19,6 @@ export default function Frame(props: FrameProps): JSX.Element {
 
   const { zoomIn, zoomOut, isZoomedIn } = React.useContext(FrameContext);
   const { skin, changeSkin } = useSkin();
-  const { theme } = useTheme();
 
   const toggleZoom = () => {
     isZoomedIn ? zoomOut() : zoomIn();

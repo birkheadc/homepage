@@ -3,6 +3,7 @@ import { FrameContext } from '../../../contexts/frame/FrameContext';
 import utils from '../../../utils';
 import { FrameColor } from '@/types/frameColor/frameColor';
 import useTheme from '@/hooks/theme/useTheme';
+import Link from 'next/link';
 
 interface ControlsProps {
   changeColor: (color: FrameColor) => void
@@ -47,8 +48,8 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('m')}></button>
       </div>
       <div className='flex flex-row w-full gap-1'>
-        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => {}}>en</button>
-        <button className='flex-grow border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-primary-0' onClick={() => {}}>jp</button>
+        <Link className='flex-grow border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0 text-center' locale='en' href='/en'>en</Link>
+        <Link className='flex-grow border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0 text-center' locale='jp' href='/jp'>jp</Link>
       </div>
     </div>
   );

@@ -28,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang={locale} data-theme='a'>
       <body className={vt323.className}>
-        {/* <NextIntlClientProvider></NextIntlClientProvider> */}
         <Providers>
           <Frame logo={<Logo />}>
             {children}
