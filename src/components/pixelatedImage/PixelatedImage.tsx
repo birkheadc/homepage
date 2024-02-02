@@ -8,10 +8,11 @@ import useTheme from '../../hooks/theme/useTheme';
 
 type PixelatedImageProps = {
   className?: string,
+  style?: React.CSSProperties,
   img: string,
   shaderMode: ImageProcessShaderMode,
   pixelLevel: number,
-  shaderEffect?: ImageProcessShaderEffect
+  shaderEffect?: ImageProcessShaderEffect,
 }
 
 export default function PixelatedImage(props: PixelatedImageProps): JSX.Element {
@@ -20,14 +21,10 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(function setImageOnMount() {
-    // if (props.img instanceof HTMLImageElement) {
-    //   setImage(props.img);
-    // } else {
     const image = new Image();
     image.src = props.img;
     image.crossOrigin = 'anonymous';
     image.onload = () => setImage(image);
-    // }
   }, [ props.img ]);
 
   React.useEffect(() => {
@@ -49,6 +46,6 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
   }, [ image, canvasRef ]);
 
   return (
-    <canvas className={props.className} ref={canvasRef}></canvas>
+    <canvas className={props.className} style={props.style} ref={canvasRef}></canvas>
   );
 }
