@@ -1,0 +1,28 @@
+.image {
+  animation: pan 8000ms linear, fade 8000ms linear;
+  opacity: 0;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+@keyframes pan {
+  to {
+    transform: translate(0px, 0px)
+  }
+}
