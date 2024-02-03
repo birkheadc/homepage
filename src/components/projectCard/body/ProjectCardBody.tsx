@@ -56,7 +56,7 @@ export default function ProjectCardBody(props: ProjectCardBodyProps): JSX.Elemen
 
       calculateDifs();
 
-    }, 16000);
+    }, 12000);
 
     return (() => {
       clearInterval(interval)
@@ -70,7 +70,7 @@ export default function ProjectCardBody(props: ProjectCardBodyProps): JSX.Elemen
         <div ref={innerRef} className={utils.cn(`absolute transition-all bottom-0 right-0 flex justify-end items-end`)}>
         { images.map(
           (image, index) =>
-          <PixelatedImage key={`project-card-image-key-${image}-${index}`} className={utils.cn('', current === index ? styles.image : 'hidden')} style={{ transform: `translate(${xDif}px, ${yDif}px)` }} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1}  />
+          <PixelatedImage key={`project-card-image-key-${image}-${index}`} className={utils.cn('', current === index ? styles.image : 'hidden')} style={{ transform: `translate(${xDif}px, ${yDif}px)` }} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={2}  />
         )}
         </div>
       </div>
