@@ -1,0 +1,39 @@
+.information:hover div.links {
+  height: 0px;
+  overflow: hidden;
+  animation: stretch 200ms 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.information:hover div.technologies {
+  /* height: 0px;
+  overflow: hidden;
+  animation: stretch 200ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; */
+}
+
+.information:hover .text {
+  opacity: 0;
+  animation: fade 200ms 400ms linear forwards;
+}
+
+.information:hover div.technologies span {
+  opacity: 0;
+  animation: fade 100ms linear forwards;
+}
+
+@keyframes stretch {
+  from {
+    height: 0px
+  }
+  to {
+    height: 2rem
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

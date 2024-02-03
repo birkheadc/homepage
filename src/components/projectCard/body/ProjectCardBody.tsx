@@ -4,16 +4,20 @@ import * as React from 'react';
 import PixelatedImage from '../../pixelatedImage/PixelatedImage';
 import { ImageProcessShaderMode } from '../../../types/image/imageProcessShaderMode';
 
-import styles from './ProjectCardImageDisplay.module.css';
+import styles from './ProjectCardBody.module.css';
 import utils from '../../../utils';
+import useLanguage from '../../../hooks/language/useLanguage';
+import { Project } from '../../../types/project/project';
+import ProjectCardInformation from './info/ProjectCardInformation';
 
-type ProjectCardImageDisplayProps = {
-  images: string[]
+type ProjectCardBodyProps = {
+  project: Project
 }
 
-export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayProps): JSX.Element {
+export default function ProjectCardBody(props: ProjectCardBodyProps): JSX.Element {
 
-  const { images } = props;
+  const { project } = props;
+  const images = project.imageUrls;
   // Hack to get around css animation not restarting if the image never changes
   if (images.length === 1) {
     images.push(images[0]);
@@ -52,7 +56,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
 
       calculateDifs();
 
-    }, 8000);
+    }, 16000);
 
     return (() => {
       clearInterval(interval)
@@ -61,7 +65,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
   }, [ images, innerRef, outerRef ]);
   
   return (
-    <div ref={outerRef} className='relative w-full h-full p-1 overflow-hidden bg-primary-1'>
+    <div ref={outerRef} className='relative w-full h-full p-1 overflow-hidden bg-primary-2'>
       <div className='relative w-full h-full overflow-hidden bg-primary-3'>
         <div ref={innerRef} className={utils.cn(`absolute transition-all bottom-0 right-0 flex justify-end items-end`)}>
         { images.map(
@@ -70,9 +74,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
         )}
         </div>
       </div>
-      <div className='absolute inset-0 z-10 flex flex-col items-center justify-center opacity-0 hover:opacity-100 backdrop-blur-sm'>
-        put info here
-      </div>
+      <ProjectCardInformation project={project} />
     </div>
   );
 }
