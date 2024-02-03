@@ -4,14 +4,19 @@
   },
   "IntroductionSection": {
     "header": {
-      "thisIs": "this is",
+      "thisIs": "こいつは",
       "colby": "colby"
     },
     "span-1": "he makes stuff",
     "span-2": {
       "onThe": "on the",
       "internet": "internet",
-      "ofAllThings": "of all places"
+      "ofAllThings": "of all things"
     }
+  },
+  "ProjectsSection": {
+    "header": "what kinds of things?",
+    "span-1": "thank you for asking!",
+    "span-2": "here are a few of the things colby is working on"
   }
 }
