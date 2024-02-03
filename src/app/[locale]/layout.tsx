@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { VT323 } from "next/font/google";
+import { DotGothic16, VT323 } from "next/font/google";
 import "./globals.css";
 import Frame from "../../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
@@ -16,7 +16,18 @@ export const viewport: Viewport = {
   
 }
 
-const vt323 = VT323({ subsets: ['latin'], weight: '400' });
+const vt323 = VT323({ subsets: ['latin'], weight: '400', variable: '--font-en' });
+const dotGothic16 = DotGothic16({ subsets: ['latin-ext'], weight: '400', variable: '--font-jp'});
+
+const fonts: { [key: string]: string } = {
+  'en': vt323.className,
+  'jp': dotGothic16.className
+}
+
+const fontSizes: { [key: string]: string } = {
+  'en': '16px',
+  'jp': '14px'
+}
 
 export default function RootLayout({
   children,
@@ -26,8 +37,8 @@ export default function RootLayout({
   params: { locale: string }
 }>) {
   return (
-    <html lang={locale} data-theme='a'>
-      <body className={vt323.className}>
+    <html lang={locale} data-theme='a' style={{ fontSize: fontSizes[locale] }}>
+      <body className={`${vt323.variable} ${dotGothic16.variable} ${fonts[locale]}`}>
         <Providers>
           <Frame logo={<Logo />}>
             {children}

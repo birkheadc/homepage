@@ -6,7 +6,6 @@ import { ImageProcessShaderMode } from '../../../types/image/imageProcessShaderM
 
 import styles from './ProjectCardBody.module.css';
 import utils from '../../../utils';
-import useLanguage from '../../../hooks/language/useLanguage';
 import { Project } from '../../../types/project/project';
 import ProjectCardInformation from './info/ProjectCardInformation';
 

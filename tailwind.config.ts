@@ -35,6 +35,10 @@ const config: Config = {
       height: {
         'double': '200%'
       },
+      fontFamily: {
+        'en': 'var(--font-en)',
+        'jp': 'var(--font-jp)'
+      }
     },
     colors: {
       'white': '#ffffff',

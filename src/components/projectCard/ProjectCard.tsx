@@ -13,7 +13,7 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
 
   if (project == null) return (
     <div className='w-full h-full border-2'>
-      <Spinner /> 
+      <Spinner />
     </div>
   )
   

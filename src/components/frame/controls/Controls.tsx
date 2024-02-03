@@ -15,9 +15,9 @@ export default function Controls(props: ControlsProps): JSX.Element {
   const { changeTheme } = useTheme();
 
   const CLASS_NAME = {
-    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-start items-start p-1',
+    common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-center items-start p-1',
     zoomedIn: 'h-0 p-0 w-0',
-    zoomedOut: 'h-2/6 w-full'
+    zoomedOut: 'h-2/6 short:h-full w-full'
   }
 
   const className = isZoomedIn ? utils.cn(CLASS_NAME.common, CLASS_NAME.zoomedIn) : utils.cn(CLASS_NAME.common, CLASS_NAME.zoomedOut);
@@ -48,8 +48,8 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('m')}></button>
       </div>
       <div className='flex flex-row w-full gap-1'>
-        <Link className='flex-grow border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0 text-center' locale='en' href='/en'>en</Link>
-        <Link className='flex-grow border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0 text-center' locale='jp' href='/jp'>jp</Link>
+        <Link className='flex-grow text-center border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0' locale='en' href='/en'>en</Link>
+        <Link className='flex-grow text-center border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0' locale='jp' href='/jp'>jp</Link>
       </div>
     </div>
   );
