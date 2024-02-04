@@ -16,8 +16,8 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
       <div className='flex flex-col items-end justify-start p-6'>
         <h2 className='text-5xl lg:text-7xl'>
           {t.rich('header', {
-            em: (value) => {
-              return <span className='text-primary-0'>{value}</span>
+            em: (inner) => {
+              return <span className='text-primary-0'>{inner}</span>
             }
           })}
         </h2>
