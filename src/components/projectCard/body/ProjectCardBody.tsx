@@ -61,7 +61,7 @@ export default function ProjectCardBody(props: ProjectCardBodyProps): JSX.Elemen
       clearInterval(interval)
     })
 
-  }, [ images, innerRef, outerRef ]);
+  }, [ images, innerRef, outerRef ]); 
   
   return (
     <div ref={outerRef} className='relative w-full h-full p-1 overflow-hidden bg-primary-2'>

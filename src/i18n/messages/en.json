@@ -3,16 +3,9 @@
     "subtext": "personal site of Colby Birkhead"
   },
   "IntroductionSection": {
-    "header": {
-      "thisIs": "this is",
-      "colby": "colby"
-    },
+    "header": "this is <em>colby</em>",
     "span-1": "he makes stuff",
-    "span-2": {
-      "onThe": "on the",
-      "internet": "internet",
-      "ofAllThings": "of all things"
-    }
+    "span-2": "on the <em>internet</em> of all things"
   },
   "ProjectsSection": {
     "header": "what kinds of things?",

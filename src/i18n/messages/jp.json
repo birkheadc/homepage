@@ -1,18 +1,11 @@
 {
   "Logo": {
-    "subtext": "Colby Birkheadの個人サイト"
+    "subtext": "personal site of Colby Birkhead"
   },
   "IntroductionSection": {
-    "header": {
-      "thisIs": "こいつは",
-      "colby": "colby"
-    },
-    "span-1": "he makes stuff",
-    "span-2": {
-      "onThe": "on the",
-      "internet": "internet",
-      "ofAllThings": "of all things"
-    }
+    "header": "<em>コービー</em>です",
+    "span-1": "ウェブ開発など",
+    "span-2": "on the <em>internet</em> of all things"
   },
   "ProjectsSection": {
     "header": "what kinds of things?",

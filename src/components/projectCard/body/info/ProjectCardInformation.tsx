@@ -4,6 +4,7 @@ import useLanguage from '../../../../hooks/language/useLanguage';
 import ProjectTechnologiesList from './technologies/ProjectTechnologiesList';
 import styles from './ProjectCardInformation.module.css';
 import utils from '../../../../utils';
+import ReadMoreButton from './readMoreButton/ReadMoreButton';
 
 type ProjectCardInformationProps = {
   project: Project
@@ -23,7 +24,7 @@ export default function ProjectCardInformation(props: ProjectCardInformationProp
       <ProjectTechnologiesList className={styles.technologies} technologies={project.technologies} />
       <span className={utils.cn('flex-grow px-2 border-l-4 border-r-4 border-primary-2 lg:text-lg', styles.text)}>{project.descriptions.shortDescriptions.find(d => d.language === language)?.content}</span>
       <div className={utils.cn('flex flex-row justify-around items-center w-full bg-primary-2 text-primary-3', styles.links)}>
-        <button className='underline hover:text-primary-0' onClick={handleReadMore} type='button'>read more</button>
+        <ReadMoreButton project={project} />
         <a className='underline hover:text-primary-0' href={project.source} target='_blank' rel='noopener noreferrer'>src code</a>
         <a className='underline hover:text-primary-0' href={project.site} target='_blank' rel='noopener noreferrer'>visit site</a>
       </div>
