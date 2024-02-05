@@ -3,8 +3,6 @@ import { DotGothic16, VT323 } from "next/font/google";
 import "./globals.css";
 import Frame from "../../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
-import { NextIntlClientProvider, useMessages, useTranslations } from "next-intl";
-import Testc from "../../components/testc/Testc";
 import Logo from "@/components/frame/logo/Logo";
 
 export const metadata: Metadata = {
@@ -39,11 +37,13 @@ export default function RootLayout({
   return (
     <html lang={locale} data-theme='a' style={{ fontSize: fontSizes[locale] }}>
       <body className={`${vt323.variable} ${dotGothic16.variable} ${fonts[locale]}`}>
-        <Providers>
-          <Frame logo={<Logo />}>
-            {children}
-          </Frame>
-        </Providers>
+        <div id='root'>
+          <Providers>
+            <Frame logo={<Logo />}>
+              {children}
+            </Frame>
+          </Providers>
+        </div>
       </body>
     </html>
   );

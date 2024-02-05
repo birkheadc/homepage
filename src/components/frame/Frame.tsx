@@ -6,9 +6,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 import Controls from './controls/Controls';
 import styles from './Frame.module.css';
-import Logo from './logo/Logo';
 import useSkin from '../../hooks/skin/useSkin';
-import useTheme from '../../hooks/theme/useTheme';
 
 type FrameProps = {
   children?: React.ReactNode,

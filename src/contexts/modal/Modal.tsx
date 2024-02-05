@@ -14,7 +14,7 @@ export default function Modal(props: ModalProps): JSX.Element {
   const { isOpen, closeMe, children } = props;
 
   return (
-    <ReactModal closeTimeoutMS={300} style={modalStyle} onRequestClose={closeMe} isOpen={isOpen} shouldCloseOnEsc shouldCloseOnOverlayClick >
+    <ReactModal appElement={document.querySelector('#root') as HTMLElement ?? undefined} closeTimeoutMS={300} style={modalStyle} onRequestClose={closeMe} isOpen={isOpen} shouldCloseOnEsc shouldCloseOnOverlayClick >
       { children }
       <ModalCloseButton onClick={closeMe} />
     </ReactModal>
