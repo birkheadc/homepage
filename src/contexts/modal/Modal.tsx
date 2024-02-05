@@ -1,3 +1,5 @@
+'use client';
+
 import { XCircleIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 import ReactModal from 'react-modal';
@@ -15,7 +17,7 @@ export default function Modal(props: ModalProps): JSX.Element {
 
   return (
     <ReactModal appElement={document.querySelector('#root') as HTMLElement ?? undefined} closeTimeoutMS={300} style={modalStyle} onRequestClose={closeMe} isOpen={isOpen} shouldCloseOnEsc shouldCloseOnOverlayClick >
-      { children }
+      <div className='overflow-auto'>{ children }</div>
       <ModalCloseButton onClick={closeMe} />
     </ReactModal>
   );
@@ -29,7 +31,7 @@ const modalStyle: ReactModal.Styles = {
     alignItems: 'center'
   },
   content: {
-    position: 'relative',
+    position: 'fixed',
     inset: 'unset',
     borderRadius: '0',
     border: 'none',
@@ -38,6 +40,6 @@ const modalStyle: ReactModal.Styles = {
     height: 'fit-content',
     maxHeight: '90svh',
     padding: 0,
-    boxShadow: '5px 5px 10px hsl(var(--twc-primary-0))'
+    boxShadow: '5px 5px 10px hsl(var(--twc-primary-0))',
   }
 }
