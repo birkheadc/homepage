@@ -15,9 +15,14 @@ export default function Modal(props: ModalProps): JSX.Element {
 
   const { isOpen, closeMe, children } = props;
 
+  let root: HTMLElement | undefined = undefined;
+  if (typeof window !== 'undefined') {
+    root = document.querySelector('#root') as HTMLElement ?? undefined
+  }
+
   return (
-    <ReactModal appElement={document.querySelector('#root') as HTMLElement ?? undefined} closeTimeoutMS={300} style={modalStyle} onRequestClose={closeMe} isOpen={isOpen} shouldCloseOnEsc shouldCloseOnOverlayClick >
-      <div className='overflow-auto'>{ children }</div>
+    <ReactModal appElement={root} closeTimeoutMS={300} style={modalStyle} onRequestClose={closeMe} isOpen={isOpen} shouldCloseOnEsc shouldCloseOnOverlayClick >
+      { children }
       <ModalCloseButton onClick={closeMe} />
     </ReactModal>
   );
@@ -35,10 +40,6 @@ const modalStyle: ReactModal.Styles = {
     inset: 'unset',
     borderRadius: '0',
     border: 'none',
-    width: 'fit-content',
-    maxWidth: '90lvw',
-    height: 'fit-content',
-    maxHeight: '90svh',
     padding: 0,
     boxShadow: '5px 5px 10px hsl(var(--twc-primary-0))',
   }
