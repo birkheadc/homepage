@@ -44,6 +44,7 @@ const config: Config = {
       'white': '#ffffff',
       'gray': '#888888',
       'black': '#000000',
+      'transparent': 'rgba(0, 0, 0, 0)',
       'berry': {
         '50': '#fff0f2',
         '100': '#ffe3e7',

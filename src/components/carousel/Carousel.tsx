@@ -67,7 +67,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
         <button className='disabled:text-primary-2 text-primary-0' disabled={isForwardDisabled} onClick={goForward}><ChevronRightIcon width={'2rem'} /></button>
       </div>
       <div className='relative pt-2 w-fit'>
-        <div className='absolute w-4 h-4 transition-all duration-500 ease-in-out border-2 border-transparent rounded-full bg-primary-2' style={{ translate: `calc((100% + 0.5rem) * ${current})`}}></div>
+        <div className='absolute w-4 h-4 transition-all duration-500 ease-in-out border-4 border-transparent rounded-full bg-primary-2 bg-clip-content' style={{ translate: `calc((100% + 0.5rem) * ${current})`}}></div>
         <div className='flex flex-row gap-2'>
           {React.Children.map(props.children,
             (child, index) =>
