@@ -10,7 +10,7 @@ import { Project } from '../../../types/project/project';
 import ProjectCardInformation from './info/ProjectCardInformation';
 
 type ProjectCardBodyProps = {
-  project: Project
+  project: Project,
 }
 
 export default function ProjectCardBody(props: ProjectCardBodyProps): JSX.Element {

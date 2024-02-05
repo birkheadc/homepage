@@ -4,7 +4,7 @@ import Spinner from '../spinner/Spinner';
 import ProjectCardBody from './body/ProjectCardBody';
 
 type ProjectCardProps = {
-  project: Project | undefined
+  project: Project | undefined,
 }
 
 export default function ProjectCard(props: ProjectCardProps): JSX.Element {
