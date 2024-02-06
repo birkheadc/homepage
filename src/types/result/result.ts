@@ -7,7 +7,8 @@ export type ResultError = {
 export enum ResultMessage {
   CONNECTION_REFUSED = 'connection refused by server',
   CONNECTION_FAILED = 'failed to connect to server',
-  FETCH_PROJECTS_SUCCESS = 'projects fetched successfully'
+  FETCH_PROJECTS_SUCCESS = 'projects fetched successfully',
+  POST_COMMENT_SUCCESS = 'comment recieved. thank you!'
 }
 
 export class Result<T = any> {

@@ -3,6 +3,8 @@ import IntroductionSection from './sections/introduction/IntroductionSection';
 import Section from '../../components/section/Section';
 import ProjectsSection from './sections/projects/ProjectsSection';
 import AboutMyWorkSection from './sections/aboutMyWork/AboutMyWorkSection';
+import AboutThisSiteSection from './sections/aboutThisSite/AboutThisSiteSection';
+import ContactSection from './sections/contact/ContactSection';
 
 export default function Home() {
   return (
@@ -17,10 +19,10 @@ export default function Home() {
         <ProjectsSection />
       </Section>
       <Section>
-        <h2>section 4</h2>
+        <AboutThisSiteSection />
       </Section>
       <Section>
-        <h2>section 5</h2>
+        <ContactSection />
       </Section>
     </main>
   );
