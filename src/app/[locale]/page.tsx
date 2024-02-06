@@ -2,7 +2,8 @@ import * as React from 'react';
 import IntroductionSection from './sections/introduction/IntroductionSection';
 import Section from '../../components/section/Section';
 import ProjectsSection from './sections/projects/ProjectsSection';
-import AboutSection from './sections/about/AboutSection';
+import AboutMeSection from './sections/aboutMe/AboutMeSection';
+import AboutMyWorkSection from './sections/aboutMyWork/AboutMyWorkSection';
 
 export default function Home() {
   return (
@@ -14,7 +15,10 @@ export default function Home() {
         <ProjectsSection />
       </Section>
       <Section>
-        <AboutSection />
+        <AboutMyWorkSection />
+      </Section>
+      <Section>
+        <AboutMeSection />
       </Section>
       <Section>
         <h2>section 4</h2>

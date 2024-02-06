@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-type AboutSectionProps = {
+type AboutMeSectionProps = {
 
 }
 
-export default function AboutSection(props: AboutSectionProps): JSX.Element {
+export default function AboutMeSection(props: AboutMeSectionProps): JSX.Element {
   return (
     <div className='w-full h-full'>
       <h2>about</h2>

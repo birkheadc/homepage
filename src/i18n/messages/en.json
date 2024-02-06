@@ -7,10 +7,17 @@
     "span-1": "he makes stuff",
     "span-2": "on the <em>internet</em> of all things"
   },
+  "AboutMyWorkSection": {
+    "header": "colby has been programming <em>most of his life</em>",
+    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+  },
   "ProjectsSection": {
     "header": "what kinds of things?",
     "span-1": "thank you for asking!",
     "span-2": "here are a few of the things colby is working on"
+  },
+  "AboutMeSection": {
+
   },
   "ProjectCard": {
     

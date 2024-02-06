@@ -46,6 +46,6 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
   }, [ image, canvasRef ]);
 
   return (
-    <canvas className={props.className} style={props.style} ref={canvasRef}></canvas>
+    <canvas data-image={props.img} className={props.className} style={props.style} ref={canvasRef}></canvas>
   );
 }

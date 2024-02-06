@@ -7,9 +7,19 @@
     "span-1": "ウェブで面白いものを作っているつもりです",
     "span-2": "よろしくお願いします"
   },
+  "AboutMyWorkSection": {
+    "header": "this is the header",
+    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+  },
   "ProjectsSection": {
     "header": "面白いものって？",
     "span-1": "その質問を待ってました！",
     "span-2": "いくつか招待いたします"
+  },
+  "AboutMeSection": {
+
+  },
+  "ProjectCard": {
+    
   }
 }
