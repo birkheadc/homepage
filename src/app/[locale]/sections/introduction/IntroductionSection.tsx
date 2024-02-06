@@ -13,22 +13,14 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
 
   return (
     <div className='relative w-full h-full'>
-      <div className='flex flex-col items-end gap-2 justify-start p-6'>
+      <div className='flex flex-col items-end justify-start gap-2 p-6'>
         <h2 className='text-5xl lg:text-7xl'>
           {t.rich('header', {
             em: (inner) =>
-            <span className='text-primary-0'>{inner}</span>
+            <span className='text-primary-0 '>{inner}</span>
           })}
         </h2>
-        <span className='text-2xl lg:text-4xl'>
-          {t('span-1')}
-        </span>
-        <span className='text-lg lg:text-2xl'>
-          {t.rich('span-2', {
-            em: (inner) =>
-            <span className='text-primary-0'>{inner}</span>
-          })}
-        </span>
+        <p className='text-lg lg:text-xl max-w-[90%] lg:max-w-[50%]'>{t('body')}</p>
       </div>
       <PixelatedImage className='absolute bottom-0 max-w-full max-h-full ' img={'/colby/400.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
     </div>

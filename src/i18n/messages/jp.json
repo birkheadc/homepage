@@ -1,20 +1,17 @@
 {
   "Logo": {
-    "subtext": "Colby Birkheadの個人サイト"
+    "subtext": "personal site of Colby Birkhead"
   },
   "IntroductionSection": {
-    "header": "<em>コービー</em>と言います",
-    "span-1": "ウェブで面白いものを作っているつもりです",
-    "span-2": "よろしくお願いします"
+    "header": "this is <em>colby</em>",
+    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
   },
   "AboutMyWorkSection": {
-    "header": "this is the header",
+    "header": "colby has been programming <em>most of his life</em>",
     "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
   },
   "ProjectsSection": {
-    "header": "面白いものって？",
-    "span-1": "その質問を待ってました！",
-    "span-2": "いくつか招待いたします"
+    "header": "here are a few of the things <em>colby</em> is working on"
   },
   "AboutMeSection": {
 
