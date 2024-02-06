@@ -2,6 +2,7 @@ import * as React from 'react';
 import IntroductionSection from './sections/introduction/IntroductionSection';
 import Section from '../../components/section/Section';
 import ProjectsSection from './sections/projects/ProjectsSection';
+import AboutSection from './sections/about/AboutSection';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <ProjectsSection />
       </Section>
       <Section>
-        <h2>section 3</h2>
+        <AboutSection />
       </Section>
       <Section>
         <h2>section 4</h2>
