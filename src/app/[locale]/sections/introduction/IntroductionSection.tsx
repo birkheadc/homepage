@@ -20,7 +20,7 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
             <span className='text-primary-0 '>{inner}</span>
           })}
         </h2>
-        <p className='text-lg lg:text-xl max-w-[90%] lg:max-w-[50%]'>{t('body')}</p>
+        <p className='text-lg lg:text-xl max-w-[90%] short:max-w-[50%] lg:max-w-[50%]'>{t('body')}</p>
       </div>
       <PixelatedImage className='absolute bottom-0 max-w-full max-h-full ' img={'/colby/400.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
     </div>

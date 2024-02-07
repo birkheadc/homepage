@@ -5,6 +5,7 @@ export type ResultError = {
 }
 
 export enum ResultMessage {
+  URL_NOT_DEFINED = 'url not defined',
   CONNECTION_REFUSED = 'connection refused by server',
   CONNECTION_FAILED = 'failed to connect to server',
   FETCH_PROJECTS_SUCCESS = 'projects fetched successfully',

@@ -13,12 +13,12 @@ type DiskProps = {
 export default function Disk(props: DiskProps): JSX.Element {
 
   const length = React.Children.count(props.children);
-  const [ indexes, setIndexes ] = React.useState<number[]>([0, 0, 0]);
+  const [ indexes, setIndexes ] = React.useState<number[]>([0, 0, 0, 0]);
 
   React.useEffect(function setIndexIncrementerInterval() {
     const interval = setInterval(() => {
       setIndexes(i => {
-        let next = i[2] + 1;
+        let next = i[3] + 1;
         if (next >= length) next -= length;
         const newIndexes = i.slice(1);
         newIndexes.push(next);
