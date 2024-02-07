@@ -26,6 +26,7 @@ export default function ContactSection(props: ContactSectionProps): JSX.Element 
             <li><a draggable='false' href={'https://www.linkedin.com/in/colby-birkhead'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/linkedin-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} /></a></li>
             <li><a draggable='false' href={'https://github.com/birkheadc'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-full hover:bg-primary-0' img={'/devicons/github-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} /></a></li>
             <li><a draggable='false' href={'https://www.facebook.com/#!/profile.php?id=100000139877934'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/facebook-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} /></a></li>
+            <li><a draggable='false' href={'https://birkheadc.itch.io/'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/itchio-logo-textless-black.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} /></a></li>
           </ul>
           <p className='max-w-3xl text-xl text-justify lg:text-2xl'>
             {t.rich('leave-a-comment', {

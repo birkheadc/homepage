@@ -22,7 +22,9 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
         </h2>
         <p className='text-lg lg:text-xl max-w-[90%] short:max-w-[50%] lg:max-w-[50%]'>{t('body')}</p>
       </div>
-      <PixelatedImage className='absolute bottom-0 max-w-full max-h-full ' img={'/colby/400.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
+      <div className='absolute bottom-0 max-w-full max-h-full w-full short:w-1/2 lg:w-1/2'>
+        <PixelatedImage className='w-full h-full' img={'/colby/400.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
+      </div>
     </div>
   );
 }

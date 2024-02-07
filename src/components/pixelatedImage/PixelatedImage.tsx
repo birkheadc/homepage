@@ -32,7 +32,7 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
       if (image == null || canvasRef.current == null) return;
       await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), props.pixelLevel, props.shaderMode, props.shaderEffect);
     })();
-  }, [ image, canvasRef ]);
+  }, [ image, canvasRef, props.pixelLevel, props.shaderMode, props.shaderEffect ]);
 
   React.useEffect(function setEventListenerToReprocessImageOnThemeChange() {
     const listener = () => {
@@ -43,7 +43,7 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
     return (() => {
       window.removeEventListener('onthemechange', listener);
     });
-  }, [ image, canvasRef ]);
+  }, [ image, canvasRef, props.pixelLevel, props.shaderMode, props.shaderEffect ]);
 
   return (
     <canvas data-image={props.img} className={props.className} style={props.style} ref={canvasRef}></canvas>

@@ -37,7 +37,7 @@ export default function Disk(props: DiskProps): JSX.Element {
           {React.Children.map(props.children,
             (child, index) =>
             <div className={utils.cn('absolute w-full h-full ', indexes.includes(index) ? styles.disk : '')}>
-              <div className={utils.cn('absolute bottom-0 lg:top-0 lg:bottom-auto right-0', indexes.includes(index) ? styles.diskChild : '')}>
+              <div className={utils.cn('w-32 h-32 absolute bottom-0 lg:top-0 lg:bottom-auto right-0', indexes.includes(index) ? styles.diskChild : '')}>
                 {child}
               </div>
             </div>  

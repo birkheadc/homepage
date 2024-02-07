@@ -11,10 +11,26 @@
     "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
   },
   "ProjectsSection": {
-    "header": "here are a few of the things <em>colby</em> is working on"
+    "header": "what's <em>colby</em> been working on lately?"
   },
-  "AboutMeSection": {
-
+  "ContactSection": {
+    "header": "feel free to contact <em>colby</em> if you like!",
+    "leave-a-comment": "or leave a quick comment with the form below!"
+  },
+  "AboutThisSiteSection": {
+    "header": "this site itself is colby's <em>most personal project</em>",
+    "AboutFrame": {
+      "header": "about the frame / menu",
+      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+    },
+    "AboutColors": {
+      "header": "about the color themes",
+      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+    },
+    "AboutImages": {
+      "header": "about the images",
+      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+    }
   },
   "ProjectCard": {
     
