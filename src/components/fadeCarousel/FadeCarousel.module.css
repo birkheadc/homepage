@@ -1,0 +1,59 @@
+.child {
+
+}
+
+.child.show {
+
+}
+
+.child.hide {
+  opacity: 0;
+}
+
+.curtain {
+
+}
+
+.content {
+
+}
+
+.child.show .curtain {
+  animation: bg-color-fade 2000ms steps(14);
+}
+
+.child.show .content {
+
+}
+
+.child.hide .curtain {
+
+}
+
+.child.hide .content {
+
+}
+
+@keyframes bg-color-fade {
+  0% {
+    background-color: transparent;
+  }
+  16.67% {
+    background-color: hsl(var(--twc-primary-2));
+  }
+  33.33% {
+    background-color: hsl(var(--twc-primary-1));
+  }
+  50% {
+    background-color: hsl(var(--twc-primary-0));
+  }
+  66.67% {
+    background-color: hsl(var(--twc-primary-1));
+  }
+  83.33% {
+    background-color: hsl(var(--twc-primary-2));
+  }
+  100% {
+    background-color: transparent;
+  }
+}

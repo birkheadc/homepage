@@ -22,7 +22,7 @@ export default function AboutThisSiteCarousel(props: AboutThisSiteCarouselProps)
           </p>
         </div>
         <div>
-        <h3 className='text-3xl lg:text-5xl'>
+        <h3 className='text-3xl lg:text-5xl bg-primary-1 text-primary-3 p-1 px-3'>
             {t('AboutColors.header')}
           </h3>
           <p>
@@ -30,7 +30,7 @@ export default function AboutThisSiteCarousel(props: AboutThisSiteCarouselProps)
           </p>
         </div>
         <div>
-        <h3 className='text-3xl lg:text-5xl'>
+        <h3 className='text-3xl lg:text-5xl bg-primary-1 text-primary-3 p-1 px-3'>
             {t('AboutImages.header')}
           </h3>
           <p>
