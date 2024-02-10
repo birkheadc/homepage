@@ -1,5 +1,6 @@
 import { createThemes } from 'tw-colors';
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -151,6 +152,10 @@ const config: Config = {
     }
   },
   plugins: [
+    plugin(function({ addVariant }) {
+      addVariant('hocus', ['&:hover', '&:focus']);
+      addVariant('hocus-within', ['&:hover', '&:focus-within']);
+    }),
     createThemes({
       a: {
         primary: {

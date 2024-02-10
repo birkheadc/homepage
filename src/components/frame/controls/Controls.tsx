@@ -16,7 +16,7 @@ export default function Controls(props: ControlsProps): JSX.Element {
 
   const CLASS_NAME = {
     common: 'transition-all duration-300 overflow-hidden flex flex-col gap-4 justify-center items-start p-1',
-    zoomedIn: 'h-0 p-0 w-0',
+    zoomedIn: 'h-0 p-0 w-0 hidden',
     zoomedOut: 'h-2/6 short:h-full w-full'
   }
 
@@ -48,8 +48,8 @@ export default function Controls(props: ControlsProps): JSX.Element {
         <button data-theme='m' className='flex-grow h-6 border-2 bg-gradient-to-br from-primary-1 to-primary-2 hover:outline outline-neutral-200' onClick={() => changeTheme('m')}></button>
       </div>
       <div className='flex flex-row w-full gap-1'>
-        <Link className='flex-grow text-center border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0' locale='en' href='/en'>en</Link>
-        <Link className='flex-grow text-center border-2 bg-gradient-to-br from primary-1 to primary-2 hover:outline outline-primary-0' locale='jp' href='/jp'>jp</Link>
+        <Link className='flex-grow text-center border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 text-neutral-900 hocus:text-neutral-200 border-neutral-900' locale='en' href='/en'>en</Link>
+        <Link className='flex-grow text-center border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 text-neutral-900 hocus:text-neutral-200 border-neutral-900' locale='jp' href='/jp'>jp</Link>
       </div>
     </div>
   );

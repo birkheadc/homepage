@@ -3,6 +3,7 @@ import { ImageProcessShaderMode } from '@/types/image/imageProcessShaderMode';
 import { useTranslations } from 'next-intl';
 import * as React from 'react';
 import ContactForm from './form/ContactForm';
+import ResumeLink from './resumeLink/ResumeLink';
 
 interface ContactSectionProps {
 
@@ -21,13 +22,14 @@ export default function ContactSection(props: ContactSectionProps): JSX.Element 
               em: inner => <span className='text-primary-0'>{inner}</span>
             })}
           </h2>
-          <a className='text-xl underline text-primary-0 hover:text-primary-1 lg:text-2xl' draggable='false' href={'mailto:birkheadc@gmail.com'} >birkheadc@gmail.com</a>
+          <a className='text-xl underline text-primary-0 hocus:text-primary-1 lg:text-2xl' draggable='false' href={'mailto:birkheadc@gmail.com'} >birkheadc@gmail.com</a>
           <ul className='flex flex-row gap-2'>
-            <li><a draggable='false' href={'https://www.linkedin.com/in/colby-birkhead'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/linkedin-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={2} /></a></li>
-            <li><a draggable='false' href={'https://github.com/birkheadc'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-full hover:bg-primary-0' img={'/devicons/github-original.png'} shaderMode={ImageProcessShaderMode.LIGHT} pixelLevel={2} /></a></li>
-            <li><a draggable='false' href={'https://www.facebook.com/#!/profile.php?id=100000139877934'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/facebook-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={2} /></a></li>
-            <li><a draggable='false' href={'https://birkheadc.itch.io/'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md hover:bg-primary-0' img={'/devicons/itchio.png'} shaderMode={ImageProcessShaderMode.DARK} pixelLevel={2} /></a></li>
+            <li className='hocus-within:bg-primary-0'><a draggable='false' href={'https://www.linkedin.com/in/colby-birkhead'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md ' img={'/devicons/linkedin-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={2} /></a></li>
+            <li className='hocus-within:bg-primary-0'><a draggable='false' href={'https://github.com/birkheadc'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-full' img={'/devicons/github-original.png'} shaderMode={ImageProcessShaderMode.LIGHT} pixelLevel={2} /></a></li>
+            <li className='hocus-within:bg-primary-0'><a draggable='false' href={'https://www.facebook.com/#!/profile.php?id=100000139877934'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md' img={'/devicons/facebook-original.png'} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={2} /></a></li>
+            <li className='hocus-within:bg-primary-0'><a draggable='false' href={'https://birkheadc.itch.io/'} target='_blank' rel='noreferrer'><PixelatedImage className='w-12 h-12 transition-all rounded-md' img={'/devicons/itchio.png'} shaderMode={ImageProcessShaderMode.DARK} pixelLevel={2} /></a></li>
           </ul>
+          <ResumeLink text={t('view-resume')} />
           <p className='max-w-3xl text-xl text-justify lg:text-2xl'>
             {t.rich('leave-a-comment', {
               em: inner => <span className='text-primary-0'>{inner}</span>

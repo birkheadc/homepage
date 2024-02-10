@@ -72,12 +72,17 @@
 .tab.show .button {
   color: hsl(var(--twc-primary-1));
   transition: all 0ms 250ms steps(4);
+  pointer-events: none;
 }
 
 .tab.hide .button {
   color: hsl(var(--twc-primary-3));
   background-color: hsl(var(--twc-primary-1));
   transition: all 250ms 0ms steps(4);
+}
+
+.tab.hide .button:focus, .tab.hide .button:hover {
+  text-decoration: underline;
 }
 
 @keyframes bg-color-fade {

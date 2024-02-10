@@ -15,7 +15,8 @@
   },
   "ContactSection": {
     "header": "feel free to contact <em>colby</em> if you like!",
-    "leave-a-comment": "or leave a quick comment with the form below!"
+    "leave-a-comment": "or leave a quick comment below!",
+    "view-resume": "view resume"
   },
   "AboutThisSiteSection": {
     "header": "this site itself is colby's <em>most personal project</em>",
@@ -25,14 +26,11 @@
     },
     "AboutColors": {
       "header": "about the color themes",
-      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio."
     },
     "AboutImages": {
       "header": "about the images",
-      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur animi dolore ullam deleniti veritatis quo! Quasi id consectetur sapiente possimus! Voluptates beatae nostrum asperiores ducimus repudiandae labore, officia hic placeat?"
     }
-  },
-  "ProjectCard": {
-    
   }
 }
