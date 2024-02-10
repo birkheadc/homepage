@@ -3,27 +3,30 @@
 }
 
 .child.show {
-
+  
 }
 
 .child.hide {
+  
+}
+
+.child .curtain {
   opacity: 0;
+  background-color: hsl(var(--twc-primary-1));
+  pointer-events: none;
 }
 
-.curtain {
-
-}
-
-.content {
+.child .content {
 
 }
 
 .child.show .curtain {
-  animation: bg-color-fade 2000ms steps(14);
+  animation: bg-color-fade 500ms steps(4);
 }
 
 .child.show .content {
-
+  opacity: 1;
+  transition: opacity 0ms 250ms;
 }
 
 .child.hide .curtain {
@@ -31,29 +34,60 @@
 }
 
 .child.hide .content {
+  opacity: 0;
+  transition: opacity 0ms 250ms;
+}
 
+.tab {
+  background-color: hsl(var(--twc-primary-3)); 
+}
+
+.tab.show {
+
+}
+
+.tab.hide {
+
+}
+
+.tab .curtain {
+  opacity: 0;
+  background-color: hsl(var(--twc-primary-1));
+  pointer-events: none;
+}
+
+.tab .button {
+  z-index: 10;
+  
+}
+
+.tab.show .curtain {
+  animation: bg-color-fade 500ms steps(4);
+}
+
+.tab.hide .curtain {
+  
+}
+
+.tab.show .button {
+  color: hsl(var(--twc-primary-1));
+  transition: all 0ms 250ms steps(4);
+}
+
+.tab.hide .button {
+  color: hsl(var(--twc-primary-3));
+  background-color: hsl(var(--twc-primary-1));
+  transition: all 250ms 0ms steps(4);
 }
 
 @keyframes bg-color-fade {
   0% {
-    background-color: transparent;
-  }
-  16.67% {
-    background-color: hsl(var(--twc-primary-2));
-  }
-  33.33% {
-    background-color: hsl(var(--twc-primary-1));
+    opacity: 0;
   }
   50% {
-    background-color: hsl(var(--twc-primary-0));
-  }
-  66.67% {
-    background-color: hsl(var(--twc-primary-1));
-  }
-  83.33% {
-    background-color: hsl(var(--twc-primary-2));
+    opacity: 1;
   }
   100% {
-    background-color: transparent;
+    opacity: 0;
   }
 }

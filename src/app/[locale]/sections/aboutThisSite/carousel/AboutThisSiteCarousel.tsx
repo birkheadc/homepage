@@ -10,34 +10,24 @@ export default function AboutThisSiteCarousel(props: AboutThisSiteCarouselProps)
 
   const t = useTranslations("AboutThisSiteSection")
 
+  const tabs: { tab: string, content: string }[] = [
+    {
+      tab: t('AboutFrame.header'),
+      content: t('AboutFrame.body')
+    },
+    {
+      tab: t('AboutColors.header'),
+      content: t('AboutColors.body')
+    },
+    {
+      tab: t('AboutImages.header'),
+      content: t('AboutImages.body')
+    }
+  ]
+
   return (
     <div className='flex-grow'>
-      <FadeCarousel>
-        <div>
-          <h3 className='text-3xl lg:text-5xl bg-primary-1 text-primary-3 p-1 px-3'>
-            {t('AboutFrame.header')}
-          </h3>
-          <p>
-            {t('AboutFrame.body')}
-          </p>
-        </div>
-        <div>
-        <h3 className='text-3xl lg:text-5xl bg-primary-1 text-primary-3 p-1 px-3'>
-            {t('AboutColors.header')}
-          </h3>
-          <p>
-            {t('AboutColors.body')}
-          </p>
-        </div>
-        <div>
-        <h3 className='text-3xl lg:text-5xl bg-primary-1 text-primary-3 p-1 px-3'>
-            {t('AboutImages.header')}
-          </h3>
-          <p>
-            {t('AboutImages.body')}
-          </p>
-        </div>
-      </FadeCarousel>
+      <FadeCarousel tabs={tabs} />
     </div>
   );
 }

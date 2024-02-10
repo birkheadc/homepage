@@ -42,5 +42,7 @@ const modalStyle: ReactModal.Styles = {
     border: 'none',
     padding: 0,
     boxShadow: '5px 5px 10px hsl(var(--twc-primary-0))',
+    maxWidth: '90%',
+    maxHeight: '90%'
   }
 }

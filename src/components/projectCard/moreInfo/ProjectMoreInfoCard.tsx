@@ -20,8 +20,8 @@ export default function ProjectMoreInfoCard(props: ProjectMoreInfoCardProps): JS
         <ProjectTechnologiesList technologies={project.technologies} />
       </div>
       <div className='flex flex-col flex-grow w-full gap-1 p-1 bg-primary-2'>
-        <p className='w-full p-2 text-xl whitespace-pre-wrap bg-primary-3 lg:text-2xl'>{project.descriptions.shortDescriptions.find(d => d.language === language)?.content}</p>
-        <p className='flex-grow w-full p-2 text-xl whitespace-pre-wrap bg-primary-3 lg:text-2xl'>{project.descriptions.longDescriptions.find(d => d.language === language)?.content}</p>
+        <p className='w-full p-2 px-4 text-xl whitespace-pre-wrap bg-primary-3 lg:text-2xl'>{project.descriptions.shortDescriptions.find(d => d.language === language)?.content}</p>
+        <p className='flex-grow w-full p-2 px-4 text-xl whitespace-pre-wrap bg-primary-3 lg:text-2xl'>{project.descriptions.longDescriptions.find(d => d.language === language)?.content}</p>
       </div>
       <ProjectCardLinks project={project} />
     </div>
