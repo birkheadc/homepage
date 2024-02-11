@@ -1,5 +1,5 @@
 export enum FrameColor {
-  GRAY = 'neutral',
+  NEUTRAL = 'neutral',
   BERRY = 'berry',
   GRAPE = 'grape',
   KIWI = 'kiwi',

@@ -44,8 +44,8 @@ export default function Frame(props: FrameProps): JSX.Element {
     },
     zoomedIn: {
       body: 'p-0',
-      first: 'p-2 px-0 rounded-none rounded-b-5xl short:rounded-r-5xl gap-1 short:w-[100lvw]',
-      second: 'p-2 h-[90svh] w-[100lvw] px-0 rounded-none',
+      first: 'p-2 px-0 rounded-none rounded-b-5xl short:rounded-r-5xl short:rounded-l-none gap-2 short:w-[100lvw]',
+      second: 'p-2 h-[88svh] w-[100lvw] short:w-[90lvw] px-0 rounded-none',
       third: 'rounded-none p-0 py-1',
       fourth: 'opacity-1 delay-700'
     },
@@ -77,8 +77,8 @@ export default function Frame(props: FrameProps): JSX.Element {
             </div>
           </div>
         </div>
+        <Controls skinColor={skin} changeSkinColor={changeSkin}/>
         <button className='mt-2 border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 border-neutral-900 text-neutral-900 hocus:text-neutral-200' onClick={toggleZoom}>{ isZoomedIn ? <BarsArrowUpIcon width={'2rem'} /> : <BarsArrowDownIcon width={'2rem'} /> }</button>
-        <Controls changeColor={changeSkin}/>
       </div>
     </div>
   );
