@@ -20,11 +20,23 @@ export default function FrameSlider(props: FrameSliderProps): JSX.Element {
   }
 
   return (
-    <div className='flex flex-row items-center w-full h-6'>
-      {SKIN_COLORS.map(
-        (color, index) =>
-        <button key={`frame-color-buttons-key-${color}`} onClick={() => changeSkin(color)} className={utils.cn(`border-y-2 transition-all flex-grow h-4 bg-gradient-to-br ${color === skin ? 'h-6 rounded-md' : 'rounded-none'} ${index === 0 ? 'border-l-2' : ''} ${index === SKIN_COLORS.length - 1 ? 'border-r-2' : ''}`, STYLES[color])}></button>
-      )}
+    <div className='relative flex flex-row items-center w-full h-8'>
+      <div className='absolute w-full h-full pointer-events-none'>
+        <div className='w-[calc(16.67%)] transition-all duration-700 h-full border-y-2 rounded-lg overflow-hidden' style={{ transform: `translate(${100*SKIN_COLORS.indexOf(skin)}%, 0%)` }}>
+          <div className='w-[600%] flex flex-row items-center transition-all duration-700' style={{ transform: `translate(${-16.67*SKIN_COLORS.indexOf(skin)}%, 0%)` }}>
+            {SKIN_COLORS.map(
+              (color, index) =>
+              <div key={`frame-color-buttons-key-${color}`} className={utils.cn(`w-[16.67%] h-8 bg-gradient-to-br`, STYLES[color], index === 0 && 'border-l-2', index === SKIN_COLORS.length - 1 && 'border-r-2')}></div>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-row items-center w-full h-6 overflow-hidden rounded-md border-y-2'>
+        {SKIN_COLORS.map(
+          (color, index) =>
+          <button key={`frame-color-buttons-key-${color}`} onClick={() => changeSkin(color)} className={utils.cn(`w-[16.67%] h-8 bg-gradient-to-br`, STYLES[color], index === 0 && 'border-l-2 rounded-l-md', index === SKIN_COLORS.length - 1 && 'border-r-2 rounded-r-md')}></button>
+        )}
+      </div>
     </div>
   );
 }
