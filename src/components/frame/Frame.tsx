@@ -2,7 +2,7 @@
 
 import { FrameContext } from '@/contexts/frame/FrameContext';
 import utils from '@/utils';
-import { BarsArrowDownIcon, BarsArrowUpIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { BarsArrowDownIcon, BarsArrowUpIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 import Controls from './controls/Controls';
 import styles from './Frame.module.css';
@@ -16,7 +16,7 @@ type FrameProps = {
 export default function Frame(props: FrameProps): JSX.Element {
 
   const { zoomIn, zoomOut, isZoomedIn } = React.useContext(FrameContext);
-  const { skin, changeSkin } = useSkin();
+  const { skin } = useSkin();
 
   const toggleZoom = () => {
     (document.activeElement as HTMLElement).blur();
@@ -77,7 +77,7 @@ export default function Frame(props: FrameProps): JSX.Element {
             </div>
           </div>
         </div>
-        <Controls skinColor={skin} changeSkinColor={changeSkin}/>
+        <Controls />
         <button className='mt-2 border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 border-neutral-900 text-neutral-900 hocus:text-neutral-200' onClick={toggleZoom}>{ isZoomedIn ? <BarsArrowUpIcon width={'2rem'} /> : <BarsArrowDownIcon width={'2rem'} /> }</button>
       </div>
     </div>

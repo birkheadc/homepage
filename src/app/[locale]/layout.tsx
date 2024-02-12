@@ -4,6 +4,8 @@ import "./globals.css";
 import Frame from "../../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
 import Logo from "@/components/frame/logo/Logo";
+import SiteFrame from "../../components/frame/SiteFrame";
+import utils from "../../utils";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
@@ -36,12 +38,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale} data-theme='a' style={{ fontSize: fontSizes[locale] }}>
-      <body className={`${vt323.variable} ${dotGothic16.variable} ${fonts[locale]}`}>
+      <body className={utils.cn(vt323.variable, dotGothic16.variable, fonts[locale])}>
         <div id='root'>
           <Providers>
-            <Frame logo={<Logo />}>
+            {/* <Frame logo={<Logo />}>
               {children}
-            </Frame>
+            </Frame> */}
+            <SiteFrame logo={<Logo />}>
+              { children }
+            </SiteFrame>
           </Providers>
         </div>
       </body>

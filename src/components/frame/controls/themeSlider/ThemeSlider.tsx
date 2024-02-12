@@ -13,7 +13,7 @@ export default function ThemeSlider(props: ThemeSliderProps): JSX.Element {
     <div className='flex flex-row items-center w-full h-6'>
       {THEMES.map(
         (_theme, index) =>
-        <button onClick={() => changeTheme(_theme)} data-theme={_theme} className={`border-y-2 transition-all flex-grow h-4 bg-gradient-to-br from-primary-1 to-primary-2 ${_theme === theme ? 'h-6 rounded-md' : 'rounded-none'} ${index === 0 ? 'border-l-2' : ''} ${index === THEMES.length - 1 ? 'border-r-2' : ''}`}></button>
+        <button key={`theme-buttons-key-${_theme}`} onClick={() => changeTheme(_theme)} data-theme={_theme} className={`border-y-2 transition-all flex-grow h-4 bg-gradient-to-br from-primary-1 to-primary-2 ${_theme === theme ? 'h-6 rounded-md' : 'rounded-none'} ${index === 0 ? 'border-l-2' : ''} ${index === THEMES.length - 1 ? 'border-r-2' : ''}`}></button>
       )}
     </div>
   );

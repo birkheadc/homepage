@@ -1,11 +1,6 @@
 .text {
   position: absolute;
-  animation: fade 300ms 600ms forwards, rainbow 3600ms 900ms forwards;
-  /* animation-name: text;
-  animation-duration: 3600ms;
-  animation-delay: 600ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite; */
+  animation: fade 300ms 900ms forwards, rainbow 3600ms 900ms forwards;
   opacity: 0;
   background: linear-gradient(to right, hsl(var(--twc-primary-1)) 25%, theme('colors.berry.500'), theme('colors.grape.500'), theme('colors.kiwi.500'), theme('colors.dandelion.500'), theme('colors.teal.500'), hsl(var(--twc-primary-1)) 75%);
   background-repeat: no-repeat;
