@@ -4,33 +4,33 @@
   },
   "IntroductionSection": {
     "header": "this is <em>colby</em>",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
-  },
-  "AboutMyWorkSection": {
-    "header": "colby has been programming <em>most of his life</em>",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+    "body": "colby enjoys exploring and building upon the endless potential of the world wide web"
   },
   "ProjectsSection": {
-    "header": "what's <em>colby</em> been working on lately?"
+    "header": "some of colby's <em>recent projects</em>"
   },
   "ContactSection": {
     "header": "feel free to contact <em>colby</em> if you like!",
     "leave-a-comment": "or leave a quick comment here!",
     "view-resume": "view resume"
   },
-  "AboutThisSiteSection": {
+  "AboutSection": {
     "header": "this site itself is colby's <em>most personal project</em>",
-    "AboutFrame": {
-      "header": "about the frame / menu",
+    "AboutThisSite": {
+      "header": "about this site",
       "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
     },
-    "AboutColors": {
-      "header": "about the color themes",
+    "AboutColby": {
+      "header": "about colby",
       "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio."
     },
-    "AboutImages": {
-      "header": "about the images",
+    "AboutColbysWork": {
+      "header": "about colby's work",
       "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur animi dolore ullam deleniti veritatis quo! Quasi id consectetur sapiente possimus! Voluptates beatae nostrum asperiores ducimus repudiandae labore, officia hic placeat?"
     }
+  },
+  "AboutMyWorkSection": {
+    "header": "colby has been programming <em>most of his life</em>",
+    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
   }
 }

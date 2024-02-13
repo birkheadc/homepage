@@ -1,14 +1,13 @@
 import { useTranslations } from 'next-intl';
 import * as React from 'react';
-import AboutThisSiteCarousel from './carousel/AboutThisSiteCarousel';
+import AboutCarousel from './carousel/AboutCarousel';
 
-interface AboutThisSiteSectionProps {
+interface AboutSectionProps {
 
 }
 
-export default function AboutThisSiteSection(props: AboutThisSiteSectionProps): JSX.Element {
-
-  const t = useTranslations('AboutThisSiteSection');
+export default function AboutSection(props: AboutSectionProps): JSX.Element {
+  const t = useTranslations('AboutSection');
 
   return (
     <div className='relative w-full h-full p-4 flex flex-col'>
@@ -17,7 +16,7 @@ export default function AboutThisSiteSection(props: AboutThisSiteSectionProps): 
           em: inner => <span className='text-primary-0'>{inner}</span>
         })}
       </h2>
-      <AboutThisSiteCarousel />
+      <AboutCarousel />
     </div>
   );
 }

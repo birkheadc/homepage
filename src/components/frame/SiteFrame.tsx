@@ -22,27 +22,25 @@ export default function SiteFrame(props: SiteFrameProps): JSX.Element {
   const skinStyle = SKIN_STYLES[skin];
 
   return (
-    <>
-      <div className={utils.cn(styles.frame, isZoomedIn && styles.zoom)}>
-        <div className={utils.cn('bg-gradient-to-br shadow-3xl', skinStyle, styles.outer)}>
-          <div className={styles.inner}>
-            <div className={styles.screen}>
-              <div className={styles.bezel}>
-                <div className={styles.view}>
-                  {!isZoomedIn && logo}
-                  <div className={styles.content}>
-                    {children}
-                  </div>
+    <div className={utils.cn(styles.frame, isZoomedIn && styles.zoom)}>
+      <div className={utils.cn('bg-gradient-to-br shadow-3xl', skinStyle, styles.outer)}>
+        <div className={styles.inner}>
+          <div className={styles.screen}>
+            <div className={styles.bezel}>
+              <div className={styles.view}>
+                {!isZoomedIn && logo}
+                <div className={styles.content}>
+                  {children}
                 </div>
               </div>
             </div>
-            <div className={styles.controls}>
-              <Controls />
-            </div>
+          </div>
+          <div className={styles.controls}>
+            <Controls />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
