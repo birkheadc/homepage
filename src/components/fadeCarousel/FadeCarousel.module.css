@@ -7,7 +7,7 @@
 }
 
 .child.hide {
-  
+  pointer-events: none;
 }
 
 .child .curtain {
@@ -39,7 +39,7 @@
 }
 
 .tab {
-  background-color: hsl(var(--twc-primary-3)); 
+  /* background-color: hsl(var(--twc-primary-3));  */
 }
 
 .tab.show {
@@ -52,13 +52,13 @@
 
 .tab .curtain {
   opacity: 0;
-  background-color: hsl(var(--twc-primary-1));
+  background-color: hsl(var(--twc-primary-1));  
   pointer-events: none;
 }
 
 .tab .button {
   z-index: 10;
-  
+  background-color: hsl(var(--twc-primary-3));
 }
 
 .tab.show .curtain {
@@ -71,7 +71,7 @@
 
 .tab.show .button {
   color: hsl(var(--twc-primary-1));
-  transition: all 0ms 250ms steps(4);
+  transition: all 250ms 250ms steps(4);
   pointer-events: none;
 }
 

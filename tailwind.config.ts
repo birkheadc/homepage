@@ -38,8 +38,8 @@ const config: Config = {
         'double': '200%'
       },
       fontFamily: {
-        'en': 'var(--font-en)',
-        'jp': 'var(--font-jp)'
+        'special': 'var(--font-special)',
+        'normal': 'var(--font-normal)'
       },
       flexGrow: {
         '60': '.60',

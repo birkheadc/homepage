@@ -4,7 +4,7 @@
   },
   "IntroductionSection": {
     "header": "this is <em>colby</em>",
-    "body": "colby enjoys exploring and building upon the endless potential of the world wide web"
+    "body": "colby enjoys exploring, and building upon, the <em>endless potential</em> of the <em>world wide web</em>"
   },
   "ProjectsSection": {
     "header": "some of colby's <em>recent projects</em>"
@@ -22,7 +22,7 @@
     },
     "AboutColby": {
       "header": "about colby",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio."
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio."
     },
     "AboutColbysWork": {
       "header": "about colby's work",
@@ -31,6 +31,11 @@
   },
   "AboutMyWorkSection": {
     "header": "colby has been programming <em>most of his life</em>",
-    "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+    "body": {
+      "1": "he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.",
+      "2": "growing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>",
+      "3": "now he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.",
+      "4": "colby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
+    }
   }
 }

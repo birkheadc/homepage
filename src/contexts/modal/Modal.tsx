@@ -1,6 +1,5 @@
 'use client';
 
-import { XCircleIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 import ReactModal from 'react-modal';
 import ModalCloseButton from './closeButton/ModalCloseButton';
@@ -33,7 +32,8 @@ const modalStyle: ReactModal.Styles = {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    zIndex: '100'
   },
   content: {
     position: 'fixed',
@@ -43,6 +43,8 @@ const modalStyle: ReactModal.Styles = {
     padding: 0,
     boxShadow: '5px 5px 10px hsl(var(--twc-primary-0))',
     maxWidth: '90%',
-    maxHeight: '90%'
+    maxHeight: '90%',
+    overflow: 'hidden',
+    height: '90%'
   }
 }

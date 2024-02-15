@@ -6,5 +6,5 @@
   - Maybe bigger images
   - Maybe gifs
   - Maybe work on scrolling
-- Delete old Frame.tsx at some point
+- Add #links to sections, have links in ABOUT section link to those
 - WRITE CONTENT

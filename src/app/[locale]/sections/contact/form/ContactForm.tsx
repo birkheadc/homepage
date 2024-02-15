@@ -55,7 +55,7 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
           <label className='absolute px-2 -top-4 left-2 bg-primary-3' htmlFor='body'>comment</label>
           <textarea className='w-full h-full p-2 py-3 outline-none bg-primary-3' disabled={isWorking} name='body' id='body' value={comment.body} onChange={handleChange}></textarea>
         </div>
-        <button className='p-1 px-3 m-auto text-2xl border-2 bg-primary-1 text-primary-3 w-fit lg:text-3xl hover:bg-primary-2 focus:bg-primary-2 hover:text-primary-0 focus:text-primary-0 border-primary-0' disabled={isWorking} type='submit'>submit</button>
+        <button className='p-1 pb-2 px-3 m-auto text-2xl border-2 bg-primary-1 text-primary-3 w-fit lg:text-3xl hover:bg-primary-2 focus:bg-primary-2 hover:text-primary-0 focus:text-primary-0 border-primary-0' disabled={isWorking} type='submit'>submit</button>
       </div>
     </form>
   );

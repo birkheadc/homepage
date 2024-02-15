@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DotGothic16, VT323 } from "next/font/google";
 import "./globals.css";
-import Frame from "../../components/frame/Frame";
 import Providers from "@/contexts/providers/Providers";
 import Logo from "@/components/frame/logo/Logo";
 import SiteFrame from "../../components/frame/SiteFrame";
@@ -16,17 +15,12 @@ export const viewport: Viewport = {
   
 }
 
-const vt323 = VT323({ subsets: ['latin'], weight: '400', variable: '--font-en' });
-const dotGothic16 = DotGothic16({ subsets: ['latin-ext'], weight: '400', variable: '--font-jp'});
+const vt323 = VT323({ subsets: ['latin'], weight: '400', variable: '--font-special' });
+const dotGothic16 = DotGothic16({ subsets: ['latin-ext'], weight: '400', variable: '--font-normal'});
 
 const fonts: { [key: string]: string } = {
-  'en': vt323.className,
-  'jp': dotGothic16.className
-}
-
-const fontSizes: { [key: string]: string } = {
-  'en': '16px',
-  'jp': '14px'
+  'special': vt323.className,
+  'normal': dotGothic16.className
 }
 
 export default function RootLayout({
@@ -37,13 +31,10 @@ export default function RootLayout({
   params: { locale: string }
 }>) {
   return (
-    <html lang={locale} data-theme='a' style={{ fontSize: fontSizes[locale] }}>
-      <body className={utils.cn(vt323.variable, dotGothic16.variable, fonts[locale])}>
+    <html lang={locale} data-theme='a'>
+      <body className={utils.cn(vt323.variable, dotGothic16.variable, fonts[locale], 'font-normal')}>
         <div id='root'>
           <Providers>
-            {/* <Frame logo={<Logo />}>
-              {children}
-            </Frame> */}
             <SiteFrame logo={<Logo />}>
               { children }
             </SiteFrame>

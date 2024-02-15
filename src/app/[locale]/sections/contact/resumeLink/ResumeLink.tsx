@@ -2,9 +2,11 @@
 
 import useLanguage from '@/hooks/language/useLanguage';
 import * as React from 'react';
+import utils from '../../../../../utils';
 
 interface ResumeLinkProps {
-  text?: string
+  className?: string,
+  text?: string | React.ReactNode | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray
 }
 
 export default function ResumeLink(props: ResumeLinkProps): JSX.Element {
@@ -17,6 +19,6 @@ export default function ResumeLink(props: ResumeLinkProps): JSX.Element {
   }, []);
 
   return (
-    <a className='text-xl underline text-primary-0 hocus:text-primary-1 focus:text-primary-1 lg:text-2xl' href={link} target='_blank' rel='noopener noreferrer'>{props.text}</a>
+    <a className={utils.cn('', props.className)} href={link} target='_blank' rel='noopener noreferrer'>{props.text}</a>
   );
 }

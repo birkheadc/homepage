@@ -62,8 +62,8 @@
 }
 
 .frame .screen {
-  width: min(50svh, 50svw);
-  height: min(50svh, 50svw);
+  width: 80svw;
+  height: 80svw;
   transition: height 300ms 300ms ease-in-out, width 300ms 150ms ease-in-out;
 }
 
@@ -143,8 +143,8 @@
   }
 
   .frame .screen {
-    /* width: 350px;
-    height: 350px; */
+    width: 50svh;
+    height: 50svh;
   }
 }
 
