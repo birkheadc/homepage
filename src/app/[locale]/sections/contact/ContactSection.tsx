@@ -14,7 +14,7 @@ export default function ContactSection(props: ContactSectionProps): JSX.Element 
   const t = useRichTranslations('ContactSection');
 
   return (
-    <div className='relative w-full h-[80svh]'>
+    <div className='relative w-full h-[80svh]' id='contact-section'>
       <div className='flex flex-col items-center justify-start w-full h-full gap-6 p-2 px-4 m-auto short:flex-row short:items-stretch'>
         <div className='flex flex-col items-center justify-center gap-1'>
           <h2 className='text-3xl text-center lg:text-5xl'>

@@ -3,6 +3,7 @@ import * as React from 'react';
 import useRichTranslations from '../../../../../hooks/useRichTranslations/useRichTranslations';
 import AboutThisSiteTab from './tabs/AboutThisSiteTab';
 import AboutColbyTab from './tabs/AboutColbyTab';
+import AboutColbysWorkTab from './tabs/AboutColbysWorkTab';
 
 interface AboutCarouselProps {
 
@@ -22,7 +23,7 @@ export default function AboutCarousel(props: AboutCarouselProps): JSX.Element {
     },
     {
       tab: t('AboutColbysWork.tab'),
-      content: t('AboutColbysWork.body')
+      content: <AboutColbysWorkTab />
     }
   ]
 

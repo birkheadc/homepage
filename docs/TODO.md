@@ -6,5 +6,3 @@
   - Maybe bigger images
   - Maybe gifs
   - Maybe work on scrolling
-- Add #links to sections, have links in ABOUT section link to those
-- WRITE CONTENT

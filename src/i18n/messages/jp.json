@@ -4,7 +4,7 @@
   },
   "IntroductionSection": {
     "header": "this is <em>colby</em>",
-    "body": "colby enjoys exploring, and building upon, the <em>endless potential</em> of the <em>world wide web</em>"
+    "body": "colby enjoys exploring the <em>endless potential</em> of the <em>world wide web</em>"
   },
   "ProjectsSection": {
     "header": "some of colby's <em>recent projects</em>"
@@ -15,27 +15,40 @@
     "view-resume": "view resume"
   },
   "AboutSection": {
-    "header": "this site itself is colby's <em>most personal project</em>",
+    "header": "this homepage is colby's <em>most personal project</em>",
     "AboutThisSite": {
+      "tab": "this site",
       "header": "about this site",
-      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, voluptas cum? Quae accusamus recusandae mollitia repellendus maxime. Assumenda placeat est sequi, numquam eaque dicta unde deleniti tempore, maxime inventore impedit."
+      "body": "this site was developed with NextJS and React. its main purpose is to show off some of the cool things colby is doing, including his projects portfolio\n\nyou can check out this site's source code <srcCodeLink>here</srcCodeLink> if you're interested.",
+      "colorTheme": {
+        "header": "color theme",
+        "body": "those in the audience who grew up with a certain handheld gaming device might recognize the selection of color schemes available on this site.\n\nthe new, color version of the device was backwards compatible with the 4-tone greyscale version that came before it.\n\nthere was no data in the older games that would allow the newer version to colorize the older sprites, but you could select a color theme that would replace the old shading with a new palette.\n\nSome of those palettes could be quite offensive on the eyes, too. So if you don't appreciate the themes, it's not my fault. Blame Nint— I mean, blame the company that shall not be named here."
+      },
+      "dithering": {
+        "header": "dithering effect",
+        "body": {
+          "1": "Another feature — of the same device — that I wanted to implement, was image dithering.\n\nImage dithering is when, while constrained to a limited pallete of colors, the illusion of another color or shade can be created, by staggering pixels of different colors next to each other, in various patterns.\n\nIt's similar to dot-drawing, where you can create all shades of grey, with nothing but black dots. Lots of black dots bunched together form a dark area, while spacing them out further apart makes a lighter color.\n\nSprites in early games used this effect to create the illusion of shading, even when the hardware was limited to as few as 4 tones.\n\nThroughout this site, all the images go through a preprocessing algorithm that first blurs them slightly, and flattens them into greyscale:",
+          "2": "Then bands the image into distinct shades:",
+          "3": "Then colors those shades based on the current theme:",
+          "4": "And finally 'dithers' regions that were close to the edge of their band — the areas of the image that were close to being another shade, if they had been just slightly lighter or darker — with a simple checkerboard pattern:",
+          "5": "(Some of the steps of the algorithm actually happen simultaneously for performance's sake, but this is the main idea.)\n\nThis mimics the sprites of early video games quite nicely, if I do say so myself.\n\nThe best part is, the algorithm runs in real time, so even images pulled from outside APIs (like in the Projects section) are converted on-the-fly."
+        }
+      }
+      
     },
     "AboutColby": {
+      "tab": "colby",
       "header": "about colby",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, dolores cum magnam natus nemo esse, dolorem repellendus eveniet nobis modi eos? Consequatur commodi iusto quae excepturi asperiores, explicabo minima distinctio."
+      "body": "My name is Colby Birkhead. I'm an American expat.\n\nI like working with computers, games of all kinds, and reading.\n\nAfter high school, I somehow encountered Japanese culture, and became enthralled by it. This lead to studying the language, and eventually applying for and earning a scholarship to live and study in Nagoya, Japan for five years.\n\nI met my wife there, and after graduating with a Bachelor of Arts in Linguistics, I moved to South Korea, where we opened a small business and started a family together.\n\nIn my free time, I've gotten back into coding. Now I'm looking to move into software development full-time.\n\nSo if you like what you see, check out my resume <resumeLink>here</resumeLink>, or <contactMeLink>contact me</contactMeLink>."
     },
     "AboutColbysWork": {
+      "tab": "colby's work",
       "header": "about colby's work",
-      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur animi dolore ullam deleniti veritatis quo! Quasi id consectetur sapiente possimus! Voluptates beatae nostrum asperiores ducimus repudiandae labore, officia hic placeat?"
+      "body": "Most of my life, I've been drawn by programming and programming-adjacent activities.\n\nI tinkered with BASIC on my VTech laptop when I was a kid, and spent more time in map and campaign editors than actually playing games growing up.\n\nI studied PERL, Python, and web technologies (HTML, CSS, JavaScript, PHP) in high school.\n\nAfter university, I tried out Unreal Engine, then Unity in my free time. Unity lead me to writing C#, which rekindled my joy for programming.\n\nNow, my focus is mainly on web applications, with the occasional vacation in game development. I've also created a few applications to help run my business.\n\nYou can check out some of my proudest work <t>here</t>."
     }
   },
   "AboutMyWorkSection": {
     "header": "colby has been programming <em>most of his life</em>",
-    "body": {
-      "1": "he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.",
-      "2": "growing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>",
-      "3": "now he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.",
-      "4": "colby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
-    }
+    "body": "he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.\n\ngrowing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>\n\nnow he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.\n\ncolby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
   }
 }

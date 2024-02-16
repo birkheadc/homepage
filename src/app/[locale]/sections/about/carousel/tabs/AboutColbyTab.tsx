@@ -1,6 +1,7 @@
 import * as React from 'react';
 import useRichTranslations from '../../../../../../hooks/useRichTranslations/useRichTranslations';
 import ResumeLink from '../../../contact/resumeLink/ResumeLink';
+import Link from 'next/link';
 
 type AboutColbyTabProps = {
 
@@ -17,7 +18,7 @@ export default function AboutColbyTab(props: AboutColbyTabProps): JSX.Element {
         resumeLink: (inner) =>
         <ResumeLink className='underline text-primary-0 hocus:text-primary-2' text={inner} />,
         contactMeLink: (inner) =>
-        <a className='underline text-primary-0 hocus:text-primary-2' href=''>{inner}</a>
+        <Link className='underline text-primary-0 hocus:text-primary-2' href='#contact-section'>{inner}</Link>
       })}</p>
     </div>
   );
