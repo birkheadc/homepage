@@ -130,7 +130,7 @@
 
 .frame.zoom .content {
   opacity: 1;
-  user-select: all;
+  user-select: auto;
   pointer-events: all;
   transition: all 300ms 750ms ease-in-out;
 }

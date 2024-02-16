@@ -11,7 +11,7 @@ export default function AboutSection(props: AboutSectionProps): JSX.Element {
 
   return (
     <div className='relative w-full h-[80svh] p-4 gap-4 flex flex-col short:flex-row'>
-      <h2 className='text-3xl lg:text-5xl text-balance short:w-[35%]'>
+      <h2 className='text-3xl lg:text-5xl text-balance text-center short:w-[35%]'>
         {t('header')}
       </h2>
       <AboutCarousel />

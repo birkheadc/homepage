@@ -3,52 +3,52 @@
     "subtext": "personal site of Colby Birkhead"
   },
   "IntroductionSection": {
-    "header": "this is <em>colby</em>",
-    "body": "colby enjoys exploring the <em>endless potential</em> of the <em>world wide web</em>"
+    "header": "<em>コービー</em>と申します",
+    "body": "ネット上でおもしろいものを作っているつもりです"
   },
   "ProjectsSection": {
-    "header": "some of colby's <em>recent projects</em>"
+    "header": "最近のプロジェクト"
   },
   "ContactSection": {
-    "header": "feel free to contact <em>colby</em> if you like!",
-    "leave-a-comment": "or leave a quick comment here!",
-    "view-resume": "view resume"
+    "header": "何かあれば連絡してください！",
+    "leave-a-comment": "またはここでで気軽になにか書き残していただければと",
+    "view-resume": "レジメを見る"
   },
   "AboutSection": {
-    "header": "this homepage is colby's <em>most personal project</em>",
+    "header": "本サイトもいかがでしょうか",
     "AboutThisSite": {
-      "tab": "this site",
+      "tab": "本サイト",
       "header": "about this site",
-      "body": "this site was developed with NextJS and React. its main purpose is to show off some of the cool things colby is doing, including his projects portfolio\n\nyou can check out this site's source code <srcCodeLink>here</srcCodeLink> if you're interested.",
+      "body": "このサイトはReactとNextJSで作られています. 主な役割は、私のプロジェクトを紹介することです\n\n興味があれば<srcCodeLink>こちらで</srcCodeLink>ソースコードをご覧いただくこともできます",
       "colorTheme": {
         "header": "color theme",
-        "body": "those in the audience who grew up with a certain handheld gaming device might recognize the selection of color schemes available on this site.\n\nthe new, color version of the device was backwards compatible with the 4-tone greyscale version that came before it.\n\nthere was no data in the older games that would allow the newer version to colorize the older sprites, but you could select a color theme that would replace the old shading with a new palette.\n\nSome of those palettes could be quite offensive on the eyes, too. So if you don't appreciate the themes, it's not my fault. Blame Nint— I mean, blame the company that shall not be named here."
+        "body": "とある携帯ゲーム機を使って育った方ならば、本サイトで選択できる配色になにか見覚えがあるでしょう。\n\nその「とある携帯ゲーム機」は元々、「色」の機能がついておらず、緑っぽい画面に4つくらいの濃淡を表すことしかできませんでした。\n\nしかし、後に発売されたカラーバージョンでは、古い白黒（緑黒）ソフトを起動すると、どうなるかというと、あるテーマによって色が割り当てられます。\n\nそのテーマも選ぶこともできますが、本サイトで選ばれる配色がそのときのテーマを再現したものです。\n\nそれらの配色の中には、いくつか刺激的なものも確かに含まれていますが、それを責めるなら私ではなく、ニンテっ、いや、ここでは名を挙げない、とあるゲーム会社にしてください。"
       },
       "dithering": {
         "header": "dithering effect",
         "body": {
-          "1": "Another feature — of the same device — that I wanted to implement, was image dithering.\n\nImage dithering is when, while constrained to a limited pallete of colors, the illusion of another color or shade can be created, by staggering pixels of different colors next to each other, in various patterns.\n\nIt's similar to dot-drawing, where you can create all shades of grey, with nothing but black dots. Lots of black dots bunched together form a dark area, while spacing them out further apart makes a lighter color.\n\nSprites in early games used this effect to create the illusion of shading, even when the hardware was limited to as few as 4 tones.\n\nThroughout this site, all the images go through a preprocessing algorithm that first blurs them slightly, and flattens them into greyscale:",
-          "2": "Then bands the image into distinct shades:",
-          "3": "Then colors those shades based on the current theme:",
-          "4": "And finally 'dithers' regions that were close to the edge of their band — the areas of the image that were close to being another shade, if they had been just slightly lighter or darker — with a simple checkerboard pattern:",
-          "5": "(Some of the steps of the algorithm actually happen simultaneously for performance's sake, but this is the main idea.)\n\nThis mimics the sprites of early video games quite nicely, if I do say so myself.\n\nThe best part is, the algorithm runs in real time, so even images pulled from outside APIs (like in the Projects section) are converted on-the-fly."
+          "1": "同上ゲーム機で見られるもう一つの機能、「ディザリング効果」というのを実装したかったです。\n\nディザリングとは、制約されたカラーパレットを使っている上で、二つの異なる色をずらして配置することによって、別の色やシェードを作り出す技術です。\n\nこれは、さまざまなパターンで点を配置することで、特定の色やシェードを表現する「点描法」にも似ています。\n\n当期のゲーム機では、ハードウェアの制限で使える色彩が非常に限られているのに、絵をより豊かに表示するのによく利用された現象です。\n\n本サイトでも、表示されるすべての画像をアルゴリズムに通して、当時の絵に見せかけています。まずは少々ぼかされ、グレースケールに変換します。",
+          "2": "次に、はっきりとした4色に分けます",
+          "3": "現在選択されているテーマに切り替えます",
+          "4": "そして最後に、境目に近い領域に単純なチェッカーボードパターンをかけることによって、「ディザリング効果」を適用します",
+          "5": "（実際のアルゴリズムでは、パフォーマンスのため順番通りではなく同時に行われますが、だいたいこのように絵を処理します）\n\n私自身が言うのもなんですが、初期のビデオゲーム画像をよく真似した写真ができると思います。\n\nこのアルゴリズムがリアルタイムで実行されるため、プロジェクトページに表示される画像など、外部のAPIから取得したものも処理できるのがポイントです。"
         }
       }
       
     },
     "AboutColby": {
-      "tab": "colby",
+      "tab": "作者",
       "header": "about colby",
-      "body": "My name is Colby Birkhead. I'm an American expat.\n\nI like working with computers, games of all kinds, and reading.\n\nAfter high school, I somehow encountered Japanese culture, and became enthralled by it. This lead to studying the language, and eventually applying for and earning a scholarship to live and study in Nagoya, Japan for five years.\n\nI met my wife there, and after graduating with a Bachelor of Arts in Linguistics, I moved to South Korea, where we opened a small business and started a family together.\n\nIn my free time, I've gotten back into coding. Now I'm looking to move into software development full-time.\n\nSo if you like what you see, check out my resume <resumeLink>here</resumeLink>, or <contactMeLink>contact me</contactMeLink>."
+      "body": "私はColby Birkheadといいます。アメリカ人ですけど、日本に行ったまま帰ってこない模様です。\n\n趣味はコンピューター、ゲーム、読書などです。\n\n高卒後、日本の文化に興味を持つようになって、その魅力に惹かれました。日本語を勉強し始めて三年、文部科学省の奨学金をもらって、日本で大学生として五年間生活する機会をいただきました。\n\n日本に住んでいる間妻と出会って、名古屋大学文学部を卒業して、次は韓国に行って小規模のビジネスを起業して、娘の誕生で家族も作りました。\n\n大卒後、プログラミングの勉強を再開して、将来日本かアメリカでソフトウェア業界に転職しようと思っています。\n\nご興味があればぜひ <resumeLink>こちらで</resumeLink>私のレジメを御覧になってください。または <contactMeLink>こちらで</contactMeLink>ご連絡いただければと思います。"
     },
     "AboutColbysWork": {
-      "tab": "colby's work",
+      "tab": "作者の活動",
       "header": "about colby's work",
-      "body": "Most of my life, I've been drawn by programming and programming-adjacent activities.\n\nI tinkered with BASIC on my VTech laptop when I was a kid, and spent more time in map and campaign editors than actually playing games growing up.\n\nI studied PERL, Python, and web technologies (HTML, CSS, JavaScript, PHP) in high school.\n\nAfter university, I tried out Unreal Engine, then Unity in my free time. Unity lead me to writing C#, which rekindled my joy for programming.\n\nNow, my focus is mainly on web applications, with the occasional vacation in game development. I've also created a few applications to help run my business.\n\nYou can check out some of my proudest work <t>here</t>."
+      "body": "小さいころから、パソコンやプログラミングに関心をずっと持っています。\n\n子供用ノートパソコンでBASICを学び、ゲームを遊ぶときは、ゲーム自体よりステージ作りなどのほうで時間をつぶしてました。\n\n高校では、PERL、Python、そしてウェブ開発（HTML、CSS、JavaScript）を勉強しました。\n\n大卒後、Unreal EngineやUnityを学んで、C#でスクリプトを書くことによってプログラミングの楽しさを思い出しました。\n\n今はウェブ開発を主としてアプリケーションを作りながら勉強していて、ゲーム開発にもしばしば手を出しています。自分の仕事のためのアプリも何個か作っています。\n\n<projectsLink>こちらで</projectsLink>私が作ったものを展示していますので、興味があればぜひ！"
     }
   },
   "AboutMyWorkSection": {
-    "header": "colby has been programming <em>most of his life</em>",
-    "body": "he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.\n\ngrowing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>\n\nnow he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.\n\ncolby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
+    "header": "<em>プログラミング</em>なら小さいころからやっています",
+    "body": "子供のころにはおもちゃノートパソコンで<em>BASIC</em>を書いてました。\n\nゲームが好きで、拡張スクリプトを書いたり、自作ステージを作ったりしてました。のちに、<em>Unity</em>や<em>Unreal</em>などのゲームエンジンで自分のゲームを作るようにもなりました。\n\n今は主に<em>ウェブ開発</em>に集中してアプリを作っていて、たまに<em>ゲームジャム</em>にも参加します。\n\n色んな言語やフレームワークを勉強してきましたが、今は基本的に<em>React</em>と<em>NestJS</em>でフルスタックアプリを作ることにしています. <em>AWS</em>の様々なサービスもよく利用しています。"
   }
 }
