@@ -7,15 +7,15 @@
     "body": "colby enjoys exploring the <em>endless potential</em> of the <em>world wide web</em>"
   },
   "ProjectsSection": {
-    "header": "some of colby's <em>recent projects</em>"
+    "header": "<em>recent projects</em>"
   },
   "ContactSection": {
-    "header": "feel free to contact <em>colby</em> if you like!",
-    "leave-a-comment": "or leave a quick comment here!",
+    "header": "<em>contact</em>",
+    "leave-a-comment": "or leave a quick comment right here!",
     "view-resume": "view resume"
   },
-  "AboutSection": {
-    "header": "this homepage is colby's <em>most personal project</em>",
+  "AboutSection": { 
+    "header": "<em>about</em>",
     "AboutThisSite": {
       "tab": "this site",
       "header": "about this site",
@@ -48,7 +48,7 @@
     }
   },
   "AboutMyWorkSection": {
-    "header": "colby has been programming <em>most of his life</em>",
-    "body": "he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.\n\ngrowing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>\n\nnow he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.\n\ncolby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
+    "header": "<em>programming</em>",
+    "body": "colby has been programming off and on for <em>most of his life</em>. he started with writing <em>BASIC</em> on his vtech toy laptop as a kid.\n\ngrowing up, he spent a lot of time in <em>game editors</em> extending his favorite games, then eventually moved on to coding in engines like <em>unity</em> and <em>unreal</em>\n\nnow he spends most of his time developing for <em>the web</em>, while occasionally participating in <em>game jams</em>.\n\ncolby has experience in a variety of languages and frameworks, but does most of his best work using <em>React</em> and <em>NestJS</em> to build full-stack applications. he is proficient with <em>AWS</em> and many of its services"
   }
 }

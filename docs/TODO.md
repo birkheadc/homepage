@@ -6,3 +6,4 @@
   - Maybe bigger images
   - Maybe gifs
   - Maybe work on scrolling
+- Change icons for contact page to be the same color
