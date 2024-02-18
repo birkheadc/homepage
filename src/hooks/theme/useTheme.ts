@@ -8,7 +8,7 @@ export default function useTheme(): { theme: string, getThemeColors: () => strin
 
   React.useEffect(function retrieveLocalSettings() {
     const theme = localStorage.getItem(THEME_KEY);
-    if (theme) changeTheme(theme);
+    if (theme && VALID_THEMES.includes(theme)) changeTheme(theme);
   }, []);
 
   const changeTheme = (theme: string) => {
@@ -36,3 +36,19 @@ export default function useTheme(): { theme: string, getThemeColors: () => strin
 }
 
 const THEME_KEY = 'theme';
+
+const VALID_THEMES = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm'
+];
