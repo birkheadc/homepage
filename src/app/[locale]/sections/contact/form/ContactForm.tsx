@@ -42,8 +42,10 @@ export default function ContactForm(props: ContactFormProps): JSX.Element {
 
   return (
     <form className='relative w-full flex flex-col flex-grow max-w-2xl' onSubmit={handleSubmit}>
-      { isWorking && <div className='absolute w-full h-full'>
-        <Spinner />
+      {isWorking && <div className='absolute flex justify-center items-center z-10 inset-0'>
+        <div className='w-[50%] h-[50%]'>
+          <Spinner />
+        </div>
       </div>}
       <ResultDisplay result={recentResult} />
       <div className={`${isWorking ? 'pointer-events-none opacity-25' : ' pointer-events-auto opacity-100'} flex flex-col gap-6 w-full flex-grow`}>
