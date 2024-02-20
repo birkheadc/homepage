@@ -2,7 +2,7 @@ import { Result, ResultMessage } from "@/types/result/result";
 import { Comment } from "@/types/comment/comment";
 
 export default async function postComment(comment: Comment): Promise<Result> {
-  const url = process.env.COMMENTS_URL;
+  const url = process.env.NEXT_PUBLIC_COMMENTS_URL;
   if (url == null) return Result.Fail().WithMessage(ResultMessage.URL_NOT_DEFINED);
 
   const controller = new AbortController();
