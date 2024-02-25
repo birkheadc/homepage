@@ -23,7 +23,9 @@ export default function DevIconsDisk(props: DevIconsDiskProps): JSX.Element {
 }
 
 const ICONS: string[] = [
-  'amazonwebservices-original',
+  'aws-original',
+  'nestjs-original',
+  'nextjs-plain',
   'angularjs-plain',
   'babel-original',
   'bash-original',
