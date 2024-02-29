@@ -14,8 +14,8 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
   return (
     <div className='relative w-full min-h-[80svh]'>
       <div className='flex flex-col items-end justify-start gap-2 p-6'>
-        <h2 className='text-4xl lg:text-6xl'>
-          {t('header')} 
+        <h2 className='text-3xl lg:text-6xl'>
+          {t('header')}
         </h2>
         <p className='text-xl lg:text-2xl text-right text-balance max-w-[90%] short:max-w-[50%] lg:max-w-[50%]'>{t('body')}</p>
       </div>

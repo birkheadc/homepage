@@ -33,7 +33,7 @@ export default function FadeCarousel(props: FadeCarouselProps): JSX.Element {
           (tab, index) =>
           <div key={`fade-carousel-key-${tab.tab}`} className={utils.cn('absolute inset-0', styles.child, current === index ? styles.show : styles.hide)}>
             <div className={utils.cn('absolute inset-0 z-10', styles.curtain)}></div>
-            <div className={utils.cn('p-4 h-full overflow-auto overscroll-contain ', styles.content)}>
+            <div className={utils.cn('p-4 h-full overflow-auto ', styles.content)}>
               {tab.content}
             </div>
           </div>
