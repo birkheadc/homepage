@@ -6,7 +6,6 @@ export default async function getAll(): Promise<Result<Project[]>> {
   // TODO: Get this from environment or something
   const url = process.env.NEXT_PUBLIC_PROJECTS_URL;
   if (url == null) return Result.Fail().WithMessage(ResultMessage.URL_NOT_DEFINED);
-  // const url = 'https://c0n1qyz1fg.execute-api.ap-southeast-2.amazonaws.com/prod/projects';
   
   const { signal, timeout } = utils.api.generateAbortSignal();
 

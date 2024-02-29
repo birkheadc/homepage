@@ -23,7 +23,7 @@ export default function ProjectsCarousel(props: ProjectsCarouselProps): JSX.Elem
       if (result.wasSuccess && result.body) {
         setProjects(result.body.sort((a, b) => (b.favoriteLevel - a.favoriteLevel)))
       } else {
-        setProjects([]);
+        await fetchProjects();
       }
     })();
   }, []);
