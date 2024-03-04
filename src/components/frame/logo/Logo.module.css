@@ -12,6 +12,12 @@
   text-align: center;
 }
 
+.subtext {
+  opacity: 0;
+  animation: fade 300ms 900ms forwards;
+  transition: color 300ms 0ms ease-in-out;
+}
+
 @keyframes fade {
   from { opacity: 0; }
   to { opacity: 1; }

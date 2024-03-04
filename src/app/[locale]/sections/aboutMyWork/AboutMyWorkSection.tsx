@@ -15,7 +15,7 @@ export default function AboutMyWorkSection(props: AboutMyWorkSectionProps): JSX.
         <h2 className='text-4xl lg:text-6xl text-balance'>
           {t('header')}
         </h2>
-        <p className='text-lg lg:text-xl whitespace-pre-line text-pretty z-20 pb-16 lg:pb-0 short:pb-0'>{t('body')}</p>
+        <p className='z-20 pb-16 text-lg whitespace-pre-line lg:text-xl text-pretty lg:pb-0 short:pb-0'>{t('body')}</p>
       </div>
       <div className='flex items-center justify-center lg:w-[25%] short:w-[25%]'>
         <DevIconsDisk />

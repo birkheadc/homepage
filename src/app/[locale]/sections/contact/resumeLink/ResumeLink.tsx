@@ -16,7 +16,7 @@ export default function ResumeLink(props: ResumeLinkProps): JSX.Element {
 
   React.useEffect(function generateLink() {
     setLink(`https://resume.birkheadc.me/pdf?language=${language}&`);
-  }, []);
+  }, [ language ]);
 
   return (
     <a className={utils.cn('', props.className)} href={link} target='_blank' rel='noopener noreferrer'>{props.text}</a>

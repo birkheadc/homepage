@@ -27,11 +27,12 @@
       "dithering": {
         "header": "dithering effect",
         "body": {
-          "1": "Another feature — of the same device — that I wanted to implement, was image dithering.\n\nImage dithering is when, while constrained to a limited pallete of colors, the illusion of another color or shade can be created, by staggering pixels of different colors next to each other, in various patterns.\n\nIt's similar to dot-drawing, where you can create all shades of grey, with nothing but black dots. Lots of black dots bunched together form a dark area, while spacing them out further apart makes a lighter color.\n\nSprites in early games used this effect to create the illusion of shading, even when the hardware was limited to as few as 4 tones.\n\nThroughout this site, all the images go through a preprocessing algorithm that first blurs them slightly, and flattens them into greyscale:",
-          "2": "Then bands the image into distinct shades:",
-          "3": "Then colors those shades based on the current theme:",
-          "4": "And finally 'dithers' regions that were close to the edge of their band — the areas of the image that were close to being another shade, if they had been just slightly lighter or darker — with a simple checkerboard pattern:",
-          "5": "(Some of the steps of the algorithm actually happen simultaneously for performance's sake, but this is the main idea.)\n\nThis mimics the sprites of early video games quite nicely, if I do say so myself.\n\nThe best part is, the algorithm runs in real time, so even images pulled from outside APIs (like in the Projects section) are converted on-the-fly."
+          "1": "Another feature — of the same device — that I wanted to implement, was image dithering.\n\nImage dithering is when, while constrained to a limited pallete of colors, the illusion of another color or shade can be created, by staggering pixels of different colors next to each other, in various patterns.\n\nIt's similar to dot-drawing, where you can create all shades of grey, with nothing but black dots. Lots of black dots bunched together form a dark area, while spacing them out further apart makes a lighter color.\n\nSprites in early games used this effect to create the illusion of shading, even when the hardware was limited to as few as 4 tones.",
+          "2": "Throughout this site, all the images go through a preprocessing algorithm that first blurs them slightly, and flattens them into greyscale:",
+          "3": "Then bands the image into distinct shades:",
+          "4": "Then colors those shades based on the current theme:",
+          "5": "And finally 'dithers' regions that were close to the edge of their band — the areas of the image that were close to being another shade, if they had been just slightly lighter or darker — with a simple checkerboard pattern:",
+          "6": "(Some of the steps of the algorithm actually happen simultaneously for performance's sake, but this is the main idea.)\n\nThis mimics the sprites of early video games quite nicely, if I do say so myself.\n\nThe best part is, the algorithm runs in real time, so even images pulled from outside APIs (like in the Projects section) are converted on-the-fly."
         }
       }
       
