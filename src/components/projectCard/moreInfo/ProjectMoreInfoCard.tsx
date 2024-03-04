@@ -11,7 +11,7 @@ interface ProjectMoreInfoCardProps {
 export default function ProjectMoreInfoCard(props: ProjectMoreInfoCardProps): JSX.Element {
 
   const { project } = props;
-  const language = useLanguage();
+  const {language} = useLanguage();
 
   return (
     <div className='flex flex-col items-center w-fit h-full max-w-[600px] bg-primary-2 m-auto overflow-auto'>

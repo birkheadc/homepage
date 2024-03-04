@@ -13,7 +13,7 @@ type ProjectCardInformationProps = {
 export default function ProjectCardInformation(props: ProjectCardInformationProps): JSX.Element {
 
   const { project } = props;
-  const language = useLanguage();
+  const {language} = useLanguage();
 
   const handleReadMore = () => {
     alert('sorry, not yet implemented :(');

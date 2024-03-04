@@ -11,7 +11,7 @@ interface ResumeLinkProps {
 
 export default function ResumeLink(props: ResumeLinkProps): JSX.Element {
 
-  const language = useLanguage();
+  const {language} = useLanguage();
   const [ link, setLink ] = React.useState<string>('');
 
   React.useEffect(function generateLink() {
