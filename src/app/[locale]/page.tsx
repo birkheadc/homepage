@@ -3,7 +3,6 @@ import IntroductionSection from './sections/introduction/IntroductionSection';
 import Section from '../../components/section/Section';
 import ProjectsSection from './sections/projects/ProjectsSection';
 import ContactSection from './sections/contact/ContactSection';
-import AboutSection from './sections/about/AboutSection';
 import AboutMyWorkSection from './sections/aboutMyWork/AboutMyWorkSection';
 import AboutThisSiteSection from './sections/aboutThisSite/AboutThisSiteSection';
 
