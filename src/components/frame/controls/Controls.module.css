@@ -1,13 +1,13 @@
 .controls {
   opacity: 1;
 
-  transition: all 300ms 750ms ease-in-out;
+  transition: all 300ms 750ms steps(var(--animation-steps));
 }
 
 .controls.zoom {
   opacity: 0;
   pointer-events: none;
-  transition: all 150ms 0ms ease-in-out;
+  transition: all 150ms 0ms steps(var(--animation-steps));
 }
 
 @media (max-height: 640px) {

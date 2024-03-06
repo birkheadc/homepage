@@ -15,7 +15,7 @@
 .subtext {
   opacity: 0;
   animation: fade 300ms 900ms forwards;
-  transition: color 300ms 0ms ease-in-out;
+  transition: color 300ms 0ms steps(var(--animation-steps));
 }
 
 @keyframes fade {

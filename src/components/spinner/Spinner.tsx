@@ -1,4 +1,6 @@
 import * as React from 'react';
+import styles from './Spinner.module.css';
+import utils from '../../utils';
 
 type SpinnerProps = {
 
@@ -7,7 +9,7 @@ type SpinnerProps = {
 export default function Spinner(props: SpinnerProps): JSX.Element {
   return (
     <div className='flex items-center h-full'>
-      <div className='responsive-square rounded-full border-t-4 animate-spin'>
+      <div className={utils.cn(styles.spinner, 'responsive-square rounded-full border-dashed border-t-4')}>
 
       </div>
     </div>

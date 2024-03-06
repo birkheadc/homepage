@@ -5,6 +5,7 @@ import ProjectsSection from './sections/projects/ProjectsSection';
 import ContactSection from './sections/contact/ContactSection';
 import AboutMyWorkSection from './sections/aboutMyWork/AboutMyWorkSection';
 import AboutThisSiteSection from './sections/aboutThisSite/AboutThisSiteSection';
+import Spinner from '../../components/spinner/Spinner';
 
 export default function Home() {
   return (
