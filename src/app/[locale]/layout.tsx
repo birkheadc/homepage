@@ -8,7 +8,7 @@ import utils from "../../utils";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
-  description: "Colby Birkhead's personal site",
+  description: "Personal site of Colby Birkhead, Software Developer",
 };
 
 export const viewport: Viewport = {
