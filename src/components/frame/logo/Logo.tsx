@@ -13,7 +13,7 @@ export default function Logo(props: LogoProps): JSX.Element {
 
   return (
     <div className='absolute flex items-center justify-center w-full h-full overflow-hidden '>
-      <h1 className={utils.cn(styles.text, 'text-5xl lg:text-7xl short:text-5xl uppercase font-bold text-black font-special')}>game guy</h1>
+      <h2 data-nosnippet className={utils.cn(styles.text, 'text-5xl lg:text-7xl short:text-5xl uppercase font-bold text-black font-special')}>game guy</h2>
       <span className={utils.cn(styles.subtext, 'absolute bottom-0 p-2 text-center lg:text-xl text-primary-2 text-pretty')} >{t('subtext')}</span>
     </div>
   );
