@@ -27,7 +27,7 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   }, [ wrapperRef, outerDivSize ]);
 
   return (
-    <div className={utils.cn('bg-primary-0 border-berry-600 border-2 absolute top-0 left-0', isCurrent ? styles.image : 'hidden')} style={calculateWrapperStyle(sizeDif)} ref={wrapperRef}>
+    <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'hidden')} style={calculateWrapperStyle(sizeDif)} ref={wrapperRef}>
       <PixelatedImage img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1}  />
     </div>
   );

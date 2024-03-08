@@ -33,7 +33,7 @@ export default function SiteFrame(props: SiteFrameProps): JSX.Element {
             <div className={styles.bezel}>
               <div className={styles.view}>
                 {!isZoomedIn && logo} 
-                <div className={styles.content}>
+                <div aria-hidden={isZoomedIn} className={styles.content}>
                   {children}
                 </div>
               </div>

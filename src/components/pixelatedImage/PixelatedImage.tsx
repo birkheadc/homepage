@@ -13,39 +13,44 @@ type PixelatedImageProps = {
   shaderMode: ImageProcessShaderMode,
   pixelLevel: number,
   shaderEffect?: ImageProcessShaderEffect,
+  ariaLabel?: string,
+  ariaHidden?: boolean
 }
 
 export default function PixelatedImage(props: PixelatedImageProps): JSX.Element {
+
+  const { className, style, img, shaderMode, pixelLevel, shaderEffect, ariaLabel, ariaHidden } = props;
+
   const [image, setImage] = React.useState<HTMLImageElement | null>(null);
   const { getThemeColors } = useTheme();
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(function setImageOnMount() {
     const image = new Image();
-    image.src = props.img;
+    image.src = img;
     image.crossOrigin = 'anonymous';
     image.onload = () => setImage(image);
-  }, [ props.img ]);
+  }, [ img ]);
 
   React.useEffect(() => {
     (async function processAndDrawNewImageToCanvas() {
       if (image == null || canvasRef.current == null) return;
-      await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), props.pixelLevel, props.shaderMode, props.shaderEffect);
+      await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), pixelLevel, shaderMode, shaderEffect);
     })();
-  }, [ image, canvasRef, props.pixelLevel, props.shaderMode, props.shaderEffect ]);
+  }, [ image, canvasRef, pixelLevel, shaderMode, shaderEffect ]);
 
   React.useEffect(function setEventListenerToReprocessImageOnThemeChange() {
     const listener = () => {
       if (image == null || canvasRef.current == null) return;
-      utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), props.pixelLevel, props.shaderMode, props.shaderEffect);
+      utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), pixelLevel, shaderMode, shaderEffect);
     }
     window.addEventListener('onchangetheme', listener);
     return (() => {
       window.removeEventListener('onthemechange', listener);
     });
-  }, [ image, canvasRef, props.pixelLevel, props.shaderMode, props.shaderEffect ]);
+  }, [ image, canvasRef, pixelLevel, shaderMode, shaderEffect ]);
 
   return (
-    <canvas data-image={props.img} className={props.className} style={props.style} ref={canvasRef}></canvas>
+    <canvas aria-hidden={ariaHidden} role='img' aria-label={ariaLabel} data-image={img} className={className} style={style} ref={canvasRef}></canvas>
   );
 }

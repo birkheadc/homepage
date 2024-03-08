@@ -33,7 +33,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
   }, []);
 
   return (
-    <div ref={outerDivRef} className='relative w-full h-full overflow-hidden bg-primary-3'>
+    <div aria-hidden='true' ref={outerDivRef} className='relative w-full h-full overflow-hidden bg-primary-3'>
       {images.map(
         (image, index) =>
         <ProjectCardImage key={`project-card-image-key-${image}-${index}`} outerDivSize={{

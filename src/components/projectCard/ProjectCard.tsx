@@ -19,7 +19,7 @@ export default function ProjectCard(props: ProjectCardProps): JSX.Element {
   
   return (
     <div className='relative flex flex-col w-full h-full border-2 '>
-      <span className='w-full text-xl text-center bg-primary-1 text-primary-3 lg:text-3xl'>{project.title}</span>
+      <h3 className='w-full text-xl text-center bg-primary-1 text-primary-3 lg:text-3xl'>{project.title}</h3>
       <ProjectCardBody project={project} />
     </div>
   );

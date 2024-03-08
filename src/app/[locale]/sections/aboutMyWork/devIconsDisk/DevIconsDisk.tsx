@@ -16,7 +16,7 @@ export default function DevIconsDisk(props: DevIconsDiskProps): JSX.Element {
     <Disk innerClassname='w-[100lvw] h-[100lvw] short:w-[100svh] short:h-[100svh] lg:w-[60svh] lg:h-[60svh]'>
       {icons.map(
         icon =>
-        <PixelatedImage className='w-full h-full' key={`pixelated-image-key-${icon}`} img={`/devicons/${icon}.png`} shaderMode={ImageProcessShaderMode.DARK} pixelLevel={2.5} />
+        <PixelatedImage ariaHidden className='w-full h-full' key={`pixelated-image-key-${icon}`} img={`/devicons/${icon}.png`} shaderMode={ImageProcessShaderMode.DARK} pixelLevel={2.5} />
       )}
     </Disk>
   );
