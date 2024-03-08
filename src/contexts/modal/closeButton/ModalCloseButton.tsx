@@ -10,6 +10,6 @@ export default function ModalCloseButton(props: ModalCloseButtonProps): JSX.Elem
   const { onClick } = props;
 
   return (
-    <div className='absolute top-0 left-0 p-2'><button className='text-primary-1 hover:text-primary-0 rounded-full' onClick={onClick}><XCircleIcon width={'2rem'}/></button></div>
+    <div className='absolute top-0 left-0 p-2'><button className='text-primary-1 hocus:text-primary-0 rounded-full' onClick={onClick}><XCircleIcon width={'2rem'}/></button></div>
   );
 }

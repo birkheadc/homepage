@@ -52,7 +52,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
   return (
     <div className='flex flex-col items-center justify-center w-full h-full p-2'>
       <div className='flex items-center justify-center w-full h-full'>
-        <button className='disabled:text-primary-2 text-primary-0 hover:text-primary-1 focus:text-primary-1' disabled={isBackDisabled} onClick={goBack}><ChevronLeftIcon width={'2rem'} /></button>
+        <button className='disabled:text-primary-2 text-primary-0 hocus:text-primary-1' disabled={isBackDisabled} onClick={goBack}><ChevronLeftIcon width={'2rem'} /></button>
         <div className='w-full h-full overflow-hidden embla' ref={emblaRef}>
           <div className='flex w-full h-full gap-4 embla-container'>
             {React.Children.map(props.children,
@@ -63,7 +63,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
             )}
           </div>
         </div>
-        <button className='disabled:text-primary-2 text-primary-0 hover:text-primary-1 focus:text-primary-1' disabled={isForwardDisabled} onClick={goForward}><ChevronRightIcon width={'2rem'} /></button>
+        <button className='disabled:text-primary-2 text-primary-0 hocus:text-primary-1' disabled={isForwardDisabled} onClick={goForward}><ChevronRightIcon width={'2rem'} /></button>
       </div>
       <div className='relative pt-2 w-fit'>
         <div className='absolute w-4 h-4 transition-all duration-500 ease-in-out border-4 border-transparent rounded-full bg-primary-2 bg-clip-content' style={{ translate: `calc((100% + 0.5rem) * ${current})`}}></div>

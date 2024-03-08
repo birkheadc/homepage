@@ -18,6 +18,6 @@ export default function ReadMoreButton(props: ReadMoreButtonProps): JSX.Element 
   }
 
   return (
-    <button className='underline hover:text-primary-0' onClick={handleReadMore} type='button'>read more</button>
+    <button className='underline hocus:text-primary-0' onClick={handleReadMore} type='button'>read more</button>
   );
 }

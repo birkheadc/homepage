@@ -6,6 +6,8 @@ import useSkin from '../../hooks/skin/useSkin';
 import styles from './SiteFrame.module.css';
 import utils from '@/utils';
 import Controls from './controls/Controls';
+import FocusTrap from 'focus-trap-react';
+import FocusTrapChild from '../focusTrapChild/FocusTrapChild';
 
 type SiteFrameProps = {
   children?: React.ReactNode,
@@ -38,7 +40,11 @@ export default function SiteFrame(props: SiteFrameProps): JSX.Element {
             </div>
           </div>
           <div className={styles.controls}>
-            <Controls />
+            <FocusTrap active={!isZoomedIn}>
+              <FocusTrapChild className='h-full'>
+                <Controls />
+              </FocusTrapChild>
+            </FocusTrap>
           </div>
         </div>
       </div>
