@@ -1,16 +1,16 @@
-.information:hover div.links {
+.information:hover div.links, .information:focus-within div.links {
   height: 0em;
   padding: 0em;
   overflow: hidden;
   animation: stretch 200ms 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-.information:hover .text {
+.information:hover .text, .information:focus-within .text {
   opacity: 0;
   animation: fade 200ms 400ms linear forwards;
 }
 
-.information:hover div.technologies span {
+.information:hover div.technologies span, .information:focus-within div.technologies span {
   opacity: 0;
   animation: fade 100ms linear forwards;
 }

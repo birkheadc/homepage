@@ -2,7 +2,6 @@ import * as React from 'react';
 import { EmblaCarouselType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import utils from '../../utils';
 
 type CarouselProps = {
   children?: React.ReactNode

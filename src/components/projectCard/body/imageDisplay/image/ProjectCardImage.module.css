@@ -22,7 +22,10 @@
 }
 
 @keyframes pan {
-  to {
+  from {
     transform: translate(0px, 0px)
+  }
+  to {
+    transform: translate(var(--translate-x), var(--translate-y));
   }
 }

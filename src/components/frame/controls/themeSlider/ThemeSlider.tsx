@@ -3,11 +3,12 @@ import * as React from 'react';
 import utils from '../../../../utils';
 
 interface ThemeSliderProps {
-
+  tabIndex: number
 }
 
 export default function ThemeSlider(props: ThemeSliderProps): JSX.Element {
 
+  const { tabIndex } = props;
   const { theme, changeTheme } = useTheme();
 
   return (
@@ -25,7 +26,7 @@ export default function ThemeSlider(props: ThemeSliderProps): JSX.Element {
       <div className='flex flex-row items-center w-full h-6 overflow-hidden rounded-md border-y-2'>
         {THEMES.map(
           (_theme, index) =>
-          <button data-theme={_theme} key={`frame-color-buttons-key-${_theme}`} onClick={() => changeTheme(_theme)} className={utils.cn(`w-[7.69%] h-8 bg-gradient-to-br from-primary-1 to-primary-2`, index === 0 && 'border-l-2 rounded-l-md', index === THEMES.length - 1 && 'border-r-2 rounded-r-md')}></button>
+          <button data-theme={_theme} key={`frame-color-buttons-key-${_theme}`} onClick={() => changeTheme(_theme)} className={utils.cn(`w-[7.69%] h-8 bg-gradient-to-br from-primary-1 to-primary-2`, index === 0 && 'border-l-2 rounded-l-md', index === THEMES.length - 1 && 'border-r-2 rounded-r-md')} tabIndex={tabIndex}></button>
         )}
       </div>
     </div>

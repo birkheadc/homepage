@@ -4,7 +4,11 @@
 
 :root {
   --h-nav: 3em;
-  --animation-steps: 16;
+  --animation-steps: 4;
+}
+
+* {
+  outline: none;
 }
 
 html {

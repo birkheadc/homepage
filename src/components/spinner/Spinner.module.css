@@ -1,7 +1,7 @@
 .spinner {
   animation-name: spin;
   animation-duration: 2000ms;
-  animation-timing-function: steps(32);
+  animation-timing-function: steps(16);
   animation-iteration-count: infinite;
 }
 
