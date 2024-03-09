@@ -37,7 +37,7 @@ export default function FrameSlider(props: FrameSliderProps): JSX.Element {
       <div className='flex flex-row items-center w-full h-6 overflow-hidden rounded-md border-y-2'>
         {SKIN_COLORS.map(
           (color, index) =>
-          <button role='button' aria-pressed={color === skin} key={`frame-color-buttons-key-${color}`} onClick={() => changeSkin(color)} className={utils.cn(STYLES[color], index === 0 && 'border-l-2 rounded-l-md', index === SKIN_COLORS.length - 1 && 'border-r-2 rounded-r-md', 'w-[16.67%] h-8 bg-gradient-to-br hocus:border-2')} tabIndex={tabIndex}></button>
+          <button role='button' aria-pressed={color === skin} key={`frame-color-buttons-key-${color}`} onClick={() => changeSkin(color)} className={utils.cn(STYLES[color], index === 0 && 'border-l-2 rounded-l-md', index === SKIN_COLORS.length - 1 && 'border-r-2 rounded-r-md', 'w-[16.67%] h-8 bg-gradient-to-br hocus:border-2')} tabIndex={tabIndex}><span className='hidden'>{`select frame ${color}`}</span></button>
         )}
       </div>
     </div>
