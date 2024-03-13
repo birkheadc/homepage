@@ -15,10 +15,6 @@ export default function ProjectCardInformation(props: ProjectCardInformationProp
   const { project } = props;
   const {language} = useLanguage();
 
-  const handleReadMore = () => {
-    alert('sorry, not yet implemented :(');
-  }
-
   return (
     <div className={utils.cn('absolute inset-0 z-10 flex flex-col items-center justify-between transition-all bg-opacity-75 opacity-0 hocus-within:opacity-100 backdrop-blur-sm bg-primary-3', styles.information)}>
       <ProjectTechnologiesList className={styles.technologies} technologies={project.technologies} />

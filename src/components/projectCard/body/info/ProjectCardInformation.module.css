@@ -10,7 +10,7 @@
   animation: fade 200ms 400ms linear forwards;
 }
 
-.information:hover div.technologies span, .information:focus-within div.technologies span {
+.information:hover div.technologies li, .information:focus-within div.technologies li {
   opacity: 0;
   animation: fade 100ms linear forwards;
 }
