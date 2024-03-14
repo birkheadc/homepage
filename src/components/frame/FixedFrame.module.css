@@ -1,0 +1,66 @@
+.frame {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.frame.zoom {
+
+}
+
+.frame .view {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  height: 85svh;
+  margin: auto;
+  overflow: hidden;
+  background-color: hsl(var(--twc-primary-3));
+  width: 90%;
+  max-width: 80rem;
+  border-radius: 1.5rem;
+}
+
+.frame .view::after {
+  content: '';
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 4px 4px 8px theme('colors.neutral.950');
+  pointer-events: none;
+}
+
+.frame.zoom .view {
+
+}
+
+.frame .content {
+  overflow:auto;
+  height: 85svh;
+  opacity: 0;
+}
+
+.frame.zoom .content {
+  opacity: 1;
+}
+
+.frame .logo {
+  position: absolute;
+  inset: 0;
+}
+
+.frame.zoom .logo {
+  opacity: 1;
+}
+
+.frame .controls {
+  z-index: 30;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.frame.zoom .controls {
+
+}

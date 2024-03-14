@@ -12,7 +12,7 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
   const t = useRichTranslations('IntroductionSection')
 
   return (
-    <div className='relative w-full min-h-[80svh]'>
+    <div className='relative w-full flex-grow'>
       <div className='flex flex-col items-end justify-start gap-2 p-6'>
         <h1 className='text-3xl lg:text-6xl'>
           {t('header')}

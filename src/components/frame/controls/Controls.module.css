@@ -1,17 +1,27 @@
-.controls {
-  opacity: 1;
-
-  transition: all 300ms 750ms steps(var(--animation-steps));
+.container {
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:1rem;
 }
 
-.controls.zoom {
-  opacity: 0;
-  pointer-events: none;
-  transition: all 150ms 0ms steps(var(--animation-steps));
+.container.zoom {
 }
 
-@media (max-height: 640px) {
-  .controls {
+.container .controls {
+  height: 10rem;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-  }
+.container.zoom .controls {
+  height: 0rem;
 }
