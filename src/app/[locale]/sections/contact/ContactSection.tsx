@@ -3,7 +3,7 @@ import { ImageProcessShaderMode } from '@/types/image/imageProcessShaderMode';
 import * as React from 'react';
 import ContactForm from './form/ContactForm';
 import ResumeLink from './resumeLink/ResumeLink';
-import useRichTranslations from '../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../hooks/richTranslations/useRichTranslations';
 
 interface ContactSectionProps {
 

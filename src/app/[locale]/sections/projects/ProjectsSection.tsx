@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ProjectsCarousel from './projectsCarousel/ProjectsCarousel';
-import useRichTranslations from '../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../hooks/richTranslations/useRichTranslations';
 
 type ProjectsSectionProps = {
 

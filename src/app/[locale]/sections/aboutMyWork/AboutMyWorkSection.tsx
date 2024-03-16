@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DevIconsDisk from './devIconsDisk/DevIconsDisk';
-import useRichTranslations from '../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../hooks/richTranslations/useRichTranslations';
 
 type AboutMyWorkSectionProps = {
 

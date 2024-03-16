@@ -8,7 +8,7 @@ import AboutThisSiteSection from './sections/aboutThisSite/AboutThisSiteSection'
 
 export default function Home() {
   return (
-    <main className='relative flex flex-col gap-8 transition-all duration-300 text-primary-1 max-w-7xl'>
+    <main className='relative flex flex-col gap-8 transition-all duration-300 text-primary-1 w-[100svw] max-w-7xl m-auto'>
       <Section>
         <IntroductionSection />
       </Section>

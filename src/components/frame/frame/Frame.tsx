@@ -4,6 +4,7 @@ import * as React from 'react';
 import styles from './Frame.module.css';
 import { FrameContext } from '@/contexts/frame/FrameContext';
 import useSkin from '@/hooks/skin/useSkin';
+import utils from '../../../utils';
 
 interface FrameProps {
 
@@ -16,7 +17,7 @@ export default function Frame(props: FrameProps): JSX.Element {
   const skinStyle = SKIN_STYLES[skin];
 
   return (
-    <div className='absolute inset-2 bg-transparent rounded-3xl'>
+    <div className={utils.cn('absolute inset-2 rounded-3xl bg-gradient-to-br', skinStyle)}>
       
     </div>
   );

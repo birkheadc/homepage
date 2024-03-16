@@ -1,5 +1,5 @@
 import * as React from 'react';
-import useRichTranslations from '../../../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../../../hooks/richTranslations/useRichTranslations';
 import ResumeLink from '../../../contact/resumeLink/ResumeLink';
 import Link from 'next/link';
 

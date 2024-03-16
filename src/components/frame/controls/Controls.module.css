@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:1rem;
 }
 
 .container.zoom {
@@ -20,8 +19,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: height var(--animation-2);
 }
 
 .container.zoom .controls {
   height: 0rem;
+  transition: height var(--animation-1);
 }

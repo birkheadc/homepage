@@ -20,7 +20,7 @@ const config: Config = {
       boxShadow: {
         'inner': 'inset 4px 4px 8px black',
         '3d': '12px 0px 0px #4f4f4f, 24px 12px 24px black',
-        '3xl': '8px 8px 16px black'
+        '3xl': '8px 8px 32px black'
       },
       transitionDelay: {
         '600': '600ms'
