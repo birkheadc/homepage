@@ -5,11 +5,10 @@ import ProjectsSection from './sections/projects/ProjectsSection';
 import ContactSection from './sections/contact/ContactSection';
 import AboutMyWorkSection from './sections/aboutMyWork/AboutMyWorkSection';
 import AboutThisSiteSection from './sections/aboutThisSite/AboutThisSiteSection';
-import Spinner from '../../components/spinner/Spinner';
 
 export default function Home() {
   return (
-    <main className='relative flex flex-col gap-8 transition-all duration-300 text-primary-1'>
+    <main className='relative flex flex-col gap-8 transition-all duration-300 text-primary-1 w-[100svw] max-w-7xl m-auto'>
       <Section>
         <IntroductionSection />
       </Section>

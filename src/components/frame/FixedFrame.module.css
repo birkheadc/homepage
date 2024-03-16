@@ -1,0 +1,274 @@
+.container {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+
+  --animation-0: 300ms 0ms ease-in-out;
+  --animation-1: 300ms 300ms ease-in-out;
+  --animation-2: 300ms 600ms ease-in-out;
+  --animation-3: 300ms 900ms ease-in-out;
+}
+
+.container.zoom {
+
+}
+
+.container .bezel {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  width: var(--bezel-dimension);
+  height: var(--bezel-dimension);
+  margin: auto;
+  overflow: hidden;
+  background-color: theme('colors.neutral.800');
+  border: solid 2px theme('colors.neutral.950');
+  border-radius: 2rem;
+  scale: 100% 100%;
+  translate: var(--bezel-unzoom-translate);
+
+  transition: border-radius var(--animation-2), scale var(--animation-1), translate var(--animation-2), border-width var(--animation-3);
+}
+
+.container.zoom .bezel {
+  border-radius: 0rem;
+  border-width: 2px 0px;
+  scale: var(--bezel-zoom-scale);
+  translate: 0 -5svh;
+
+  transition: border-radius var(--animation-1), scale var(--animation-2), translate var(--animation-1), border-width var(--animation-0);
+}
+
+.container .view {
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 1rem;
+  
+  background-color: hsl(var(--twc-primary-3));
+  overflow: hidden;
+  transition: border-radius var(--animation-2);
+}
+
+.container.zoom .view {
+  /* inset: 0rem; */
+  border-radius: 0rem;
+  transition: border-radius var(--animation-1);
+}
+
+.container .contentView {
+  background-color: hsl(var(--twc-primary-3));
+  position: absolute;
+  inset: 0rem;
+  opacity: 0;
+  transition: opacity 150ms 300ms ease-in-out, translate var(--animation-2);
+  height: calc(90svh - 2rem);
+  width: 100svw;
+  margin: auto;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.container.zoom .contentView {
+  opacity: 1;
+  translate: 0 -5svh;
+  transition: opacity 150ms 750ms ease-in-out, translate var(--animation-1);
+}
+
+.container .contentView::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 4px 4px 8px theme('colors.neutral.950');
+  pointer-events: none;
+}
+
+.container .content {
+  overflow: auto;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--animation-0);
+}
+
+.container.zoom .content {
+  opacity: 1;
+  transition: opacity var(--animation-3);
+}
+
+.container .view::after {
+  content: '';
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 4px 4px 8px theme('colors.neutral.950');
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity var(--animation-1), border-radius var(--animation-2);
+}
+
+.container.zoom .view::after {
+  opacity: 0;
+  border-radius: 0;
+  transition: opacity var(--animation-2), border-radius var(--animation-1);
+}
+
+.container .logo {
+  
+}
+
+.container.zoom .logo {
+  
+}
+
+.container .controls {
+  z-index: 30;
+  position: absolute;
+  bottom: 4svh;
+  left: 0;
+  right: 0;
+  width: var(--bezel-dimension);
+  margin: 0 auto;
+  transition: translate var(--animation-1);
+}
+
+.container.zoom .controls {
+  translate: 0 2svh;
+  transition: translate var(--animation-2);
+}
+
+.container .frame {
+  position: absolute;
+  inset: 1svh;
+  width: calc(var(--bezel-dimension) + 4rem);
+  translate: 0.5svw 0svw;
+  margin: auto;
+  scale: 100% 100%;
+  border-radius: 3.0rem;
+  border-width: 15px 15px 2px 2px;
+  transition: scale var(--animation-1);
+}
+
+.container.zoom .frame {
+  scale: var(--bezel-zoom-scale);
+  transition: scale var(--animation-2);
+}
+
+/* .container {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+
+  --animation-0: 300ms 0ms ease-in-out;
+  --animation-1: 300ms 300ms ease-in-out;
+  --animation-2: 300ms 600ms ease-in-out;
+  --animation-3: 300ms 900ms ease-in-out;
+}
+
+.container.zoom {
+
+}
+
+.container .bezel {
+  position: absolute;
+  top: 10svh;
+  left: 0rem;
+  right: 0rem;
+  z-index: 20;
+  width: min(50svh, 50svw);
+  height: min(50svh, 50svw);
+  margin: auto;
+  overflow: hidden;
+  background-color: theme('colors.neutral.800');
+  border: solid 2px theme('colors.neutral.950');
+  border-radius: 2rem;
+  scale: 100% 100%;
+  translate: 0px 0px;
+
+  transition: scale var(--animation-0) , translate var(--animation-1), border-radius var(--animation-2);
+}
+
+.container.zoom .bezel {
+  scale: var(--scale);
+  translate: var(--translate);
+  border-radius: 0rem;
+
+  transition: scale var(--animation-2) , translate var(--animation-1), border-radius var(--animation-2);
+}
+
+.container .view {
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 1svw;
+  
+  background-color: hsl(var(--twc-primary-3));
+  overflow: hidden;
+  transition: inset 0ms 150ms ease-in-out;
+}
+
+.container .view::after, .container .view::before {
+  content: '';
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 4px 4px 8px theme('colors.neutral.950');
+  pointer-events: none;
+}
+
+.container.zoom .view {
+  inset: var(--view-inset);
+  transition: inset 0ms 750ms ease-in-out;
+}
+
+.container .content {
+  overflow:auto;
+  height: 85svh;
+  opacity: 0;
+
+  transition: opacity var(--animation-0);
+}
+
+.container.zoom .content {
+  opacity: 1;
+  transition: opacity var(--animation-3);
+}
+
+.container .logo {
+  position: absolute;
+  inset: 0;
+  scale: 100% 100%;
+}
+
+.container.zoom .logo {
+  opacity: 1;
+  pointer-events: none;
+  scale: var(--scale-inverse);
+}
+
+.container .controls {
+  z-index: 30;
+  position: absolute;
+  bottom: 4svh;
+  left: 0;
+  right: 0;
+  width: var(--controls-width);
+  margin: 0 auto;
+}
+
+.container.zoom .controls {
+  bottom: 2svh;
+}
+
+.container .frame {
+  position: absolute;
+  inset: 2svh;
+  width: min(60svh, 60svw);
+  translate: 0.5svw 0svw;
+  margin: auto;
+  scale: 100% 100%;
+  border-radius: 1.5rem;
+  border-width: 15px 15px 2px 2px;
+  transition: scale var(--animation-1), inset var(--animation-1), border-width var(--animation-1);
+}
+
+.container.zoom .frame {
+  scale: var(--scale-frame);
+} */

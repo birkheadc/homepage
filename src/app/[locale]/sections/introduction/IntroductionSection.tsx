@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PixelatedImage from '../../../../components/pixelatedImage/PixelatedImage';
 import { ImageProcessShaderMode } from '../../../../types/image/imageProcessShaderMode';
-import useRichTranslations from '../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../hooks/richTranslations/useRichTranslations';
 
 type IntroductionSectionProps = {
 
@@ -12,7 +12,7 @@ export default function IntroductionSection(props: IntroductionSectionProps): JS
   const t = useRichTranslations('IntroductionSection')
 
   return (
-    <div className='relative w-full min-h-[80svh]'>
+    <div className='relative w-full flex-grow'>
       <div className='flex flex-col items-end justify-start gap-2 p-6'>
         <h1 className='text-3xl lg:text-6xl'>
           {t('header')}

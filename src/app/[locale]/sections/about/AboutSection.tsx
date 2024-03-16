@@ -1,6 +1,6 @@
 import * as React from 'react';
 import AboutCarousel from './carousel/AboutCarousel';
-import useRichTranslations from '../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../hooks/richTranslations/useRichTranslations';
 
 interface AboutSectionProps {
 

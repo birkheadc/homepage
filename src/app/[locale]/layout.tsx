@@ -5,6 +5,7 @@ import Providers from "@/contexts/providers/Providers";
 import Logo from "@/components/frame/logo/Logo";
 import SiteFrame from "../../components/frame/SiteFrame";
 import utils from "../../utils";
+import FixedFrame from "@/components/frame/FixedFrame";
 
 export const metadata: Metadata = {
   title: "Colby Birkhead",
@@ -35,9 +36,9 @@ export default function RootLayout({
       <body className={utils.cn(vt323.variable, dotGothic16.variable, fonts[locale], 'font-normal')}>
         <div id='root'>
           <Providers>
-            <SiteFrame logo={<Logo />}>
+            <FixedFrame logo={<Logo />}>
               { children }
-            </SiteFrame>
+            </FixedFrame>
           </Providers>
         </div>
       </body>

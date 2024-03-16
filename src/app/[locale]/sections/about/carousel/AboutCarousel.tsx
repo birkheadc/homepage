@@ -1,6 +1,6 @@
 import FadeCarousel from '@/components/fadeCarousel/FadeCarousel';
 import * as React from 'react';
-import useRichTranslations from '../../../../../hooks/useRichTranslations/useRichTranslations';
+import useRichTranslations from '../../../../../hooks/richTranslations/useRichTranslations';
 import AboutThisSiteTab from './tabs/AboutThisSiteTab';
 import AboutColbyTab from './tabs/AboutColbyTab';
 import AboutColbysWorkTab from './tabs/AboutColbysWorkTab';
