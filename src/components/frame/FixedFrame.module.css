@@ -16,7 +16,7 @@
 .container .bezel {
   position: absolute;
   inset: 0;
-  z-index: 20;
+  z-index: 10;
   width: var(--bezel-dimension);
   height: var(--bezel-dimension);
   margin: auto;
@@ -34,7 +34,7 @@
   border-radius: 0rem;
   border-width: 2px 0px;
   scale: var(--bezel-zoom-scale);
-  translate: 0px 0px;
+  translate: 0 -5svh;
 
   transition: border-radius var(--animation-1), scale var(--animation-2), translate var(--animation-1), border-width var(--animation-0);
 }
@@ -60,17 +60,18 @@
   position: absolute;
   inset: 0rem;
   opacity: 0;
-  transition: opacity 150ms 300ms ease-in-out;
-  height: calc(85svh - 2rem);
+  transition: opacity 150ms 300ms ease-in-out, translate var(--animation-2);
+  height: calc(90svh - 2rem);
   width: 100svw;
   margin: auto;
   overflow: hidden;
-  z-index: 40;
+  z-index: 20;
 }
 
 .container.zoom .contentView {
   opacity: 1;
-  transition: opacity 150ms 750ms ease-in-out;
+  translate: 0 -5svh;
+  transition: opacity 150ms 750ms ease-in-out, translate var(--animation-1);
 }
 
 .container .contentView::after {
@@ -126,12 +127,12 @@
   right: 0;
   width: var(--bezel-dimension);
   margin: 0 auto;
-  transition: translate var(--animation-2);
+  transition: translate var(--animation-1);
 }
 
 .container.zoom .controls {
   translate: 0 2svh;
-  transition: translate var(--animation-1);
+  transition: translate var(--animation-2);
 }
 
 .container .frame {

@@ -17,6 +17,6 @@ export default function MenuButton(props: MenuButtonProps): JSX.Element {
   }
 
   return (
-    <button aria-expanded={!isZoomedIn} aria-controls='menu' className='mt-2 border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 border-neutral-900 text-neutral-900 hocus:text-neutral-200' onClick={toggleZoom}>{ isZoomedIn ? <span><BarsArrowUpIcon width={'4svh'} /><span className='hidden'>open menu</span></span> : <span><BarsArrowDownIcon width={'4svh'} /><span className='hidden'>close menu</span></span> }</button>
+    <button aria-expanded={!isZoomedIn} aria-controls='menu' className='mt-2 border-2 bg-gradient-to-br from-neutral-100 to-neutral-400 hocus:from-neutral-600 hocus:to-neutral-900 hocus:outline-none border-neutral-900 text-neutral-900 hocus:text-neutral-200' onClick={toggleZoom}>{ isZoomedIn ? <span><BarsArrowUpIcon width={'4svh'} /><span className='hidden'>open menu</span></span> : <span><BarsArrowDownIcon width={'4svh'} /><span className='hidden'>close menu</span></span> }</button>
   );
 }

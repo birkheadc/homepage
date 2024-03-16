@@ -78,7 +78,7 @@ function calculateCSSVariablesFromScreenSize(size: { width: number, height: numb
   
   const bezelDimension = Math.min((size.width * 0.8), (size.height * 0.5));
   const bezelZoomScaleX = (size.width / bezelDimension) * 100;
-  const bezelZoomScaleY = ((size.height * 0.85) / bezelDimension) * 100;
+  const bezelZoomScaleY = ((size.height * 0.90) / bezelDimension) * 100;
 
   const bezelUnzoomTranslate = 0;
   return {
