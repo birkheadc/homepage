@@ -1,6 +1,7 @@
 .image {
   animation: pan 12000ms linear infinite, fade 12000ms linear infinite;
   opacity: 0;
+  transform: translate(0px, 0px);
 }
 
 @keyframes fade {

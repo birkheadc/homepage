@@ -6,7 +6,7 @@ import styles from './ProjectCardImage.module.css';
 import Spinner from '../../../../spinner/Spinner';
 
 type ProjectCardImageProps = {
-  outerDivSize: { width: number, height: number },
+  outerDivSize: { width?: number, height?: number },
   image: string,
   isCurrent: boolean
 }
@@ -21,15 +21,17 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   }, []);
 
   const handleReady = (canvas: HTMLCanvasElement) => {
+
     console.log({ image, width: canvas.getBoundingClientRect().width, height: canvas.getBoundingClientRect().height });
+    
     if (wrapperRef.current == null) {
       console.log('uh oh wrapper ref is null');
       return;
     };
 
     const canvasSize = canvas.getBoundingClientRect();
-    const x = canvasSize.width - outerDivSize.width;
-    const y = canvasSize.height - outerDivSize.height;
+    const x = canvasSize.width - (outerDivSize.width ?? 0);
+    const y = canvasSize.height - (outerDivSize.height ?? 0);
 
     wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
     wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
