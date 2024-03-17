@@ -18,6 +18,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
   }
 
   React.useEffect(function setLoopInterval() {
+    if (outerDivRef == null) return;
     const interval = setInterval(() => {
 
       setCurrent(c => {
@@ -30,7 +31,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
     return (() => {
       clearInterval(interval)
     })
-  }, []);
+  }, [ outerDivRef ]);
 
   return (
     <div aria-hidden='true' ref={outerDivRef} className='relative w-full h-full overflow-hidden bg-primary-3'>
