@@ -24,7 +24,8 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
 
   React.useEffect(function calculatePanVector() {
     if (outerDivSize.width == null || outerDivSize.height == null || canvasSize == null || wrapperRef.current == null) {
-      console.log("didn't calc pan vector");
+      console.log("didn't calc pan vector because");
+      console.log({ outerDivSize, canvasSize, wrapperRef: wrapperRef.current });
       return;
     }
 
