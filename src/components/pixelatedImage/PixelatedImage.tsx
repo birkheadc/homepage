@@ -35,8 +35,10 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
 
   React.useEffect(() => {
     (async function processAndDrawNewImageToCanvas() {
+      console.log('start process image...');
       if (image == null || canvasRef.current == null) return;
       await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), pixelLevel, shaderMode, shaderEffect);
+      console.log('done process image');
       onReady && onReady();
     })();
   }, [ image, canvasRef, pixelLevel, shaderMode, shaderEffect ]);
