@@ -37,10 +37,12 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
     <div aria-hidden='true' ref={outerDivRef} className='relative w-full h-full overflow-hidden bg-primary-3'>
       {images.map(
         (image, index) =>
-        <ProjectCardImage key={`project-card-image-key-${image}-${index}`} outerDivSize={{
-            width: outerDivRef.current?.getBoundingClientRect().width,
-            height: outerDivRef.current?.getBoundingClientRect().height
-          }} image={image} isCurrent={current === index} />
+        <React.Fragment key={`project-card-image-key-${image}-${index}`} >
+          { outerDivRef.current && <ProjectCardImage outerDivSize={{
+              width: outerDivRef.current.getBoundingClientRect().width,
+              height: outerDivRef.current.getBoundingClientRect().height
+            }} image={image} isCurrent={current === index} />}
+        </React.Fragment>
       )}
     </div>
   );
