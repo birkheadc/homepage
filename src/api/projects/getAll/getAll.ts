@@ -3,15 +3,8 @@ import { Result, ResultMessage } from "../../../types/result/result";
 import utils from "../../../utils";
 
 export default async function getAll(): Promise<Result<Project[]>> {
-  // TODO: Get this from environment or something
   const url = process.env.NEXT_PUBLIC_PROJECTS_URL;
   if (url == null) return Result.Fail().WithMessage(ResultMessage.URL_NOT_DEFINED);
-
-  await new Promise<void>((res, rej) => {
-    setTimeout(() => {
-      res();
-    }, 4000)
-  } )
   
   const { signal, timeout } = utils.api.generateAbortSignal();
 
