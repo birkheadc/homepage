@@ -16,17 +16,22 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   const { outerDivSize, image, isCurrent } = props;
   const wrapperRef = React.useRef<HTMLDivElement>(null);
 
-  const handleReady = (canvas: HTMLCanvasElement) => {
-    
-    if (wrapperRef.current == null) return;
+  const [ canvasSize, setCanvasSize ] = React.useState<{ width: number, height: number} | undefined>(undefined);
 
-    const canvasSize = canvas.getBoundingClientRect();
+  const handleReady = (canvas: HTMLCanvasElement) => {
+    setCanvasSize({ width:canvas.getBoundingClientRect().width , height: canvas.getBoundingClientRect().height });
+  }
+
+  React.useEffect(function calculatePanVector() {
+    if (outerDivSize.width == null || outerDivSize.height == null || canvasSize == null || wrapperRef.current == null) return;
+
     const x = canvasSize.width - (outerDivSize.width ?? 0);
     const y = canvasSize.height - (outerDivSize.height ?? 0);
 
-    wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
-    wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
-  }
+    wrapperRef.current.style.setProperty('--translate-x', `${x * -1}px`);
+    wrapperRef.current.style.setProperty('--translate-y', `${y * -1}px`);
+
+  }, [ outerDivSize, canvasSize, wrapperRef ]);
 
   return (
     <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'opacity-0')} ref={wrapperRef}>

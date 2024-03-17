@@ -56,7 +56,7 @@ export default function FixedFrame(props: FixedFrameProps): JSX.Element {
       </div>
       <div className={styles.controls}>
         <FocusTrap active={!isZoomedIn} focusTrapOptions={{ allowOutsideClick: true }}>
-          <FocusTrapChild>
+          <FocusTrapChild className='w-full h-full'>
             <Controls />
           </FocusTrapChild>
         </FocusTrap>
@@ -76,13 +76,14 @@ const SKIN_STYLES: { [key: string]: string } = {
 
 function calculateCSSVariablesFromScreenSize(size: { width: number, height: number } ): { bezelDimension: string, bezelZoomScale: string, bezelUnzoomTranslate: string } {
   
-  const bezelDimension = Math.min((size.width * 0.8), (size.height * 0.5));
-  const bezelZoomScaleX = (Math.ceil(size.width / bezelDimension)) * 100;
-  const bezelZoomScaleY = ((size.height * 0.90) / bezelDimension) * 100;
+  const isShort = size.height <= 640;
+  const bezelDimension = isShort ? Math.min(size.height * 0.8, size.width * 0.5) : Math.min((size.width * 0.8), (size.height * 0.5));
+  const bezelZoomScaleX = (Math.ceil(size.width / bezelDimension)) * (isShort ? 100 : 100);
+  const bezelZoomScaleY = ((size.height * 0.90) / bezelDimension) * (isShort ? 115 : 100);
 
   return {
     bezelDimension: `${bezelDimension}px`,
     bezelZoomScale: `${bezelZoomScaleX}% ${bezelZoomScaleY}%`,
-    bezelUnzoomTranslate: `0px ${-1 * (((size.height * 0.9) / 2) - (bezelDimension / 2))}px`
+    bezelUnzoomTranslate: isShort ? `${-1 * (((size.width * 0.9) / 2) - (bezelDimension / 2))}px 0px` : `0px ${-1 * (((size.height * 0.9) / 2) - (bezelDimension / 2))}px`
   }
 }

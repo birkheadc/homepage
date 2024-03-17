@@ -8,6 +8,7 @@
   --animation-0: 300ms 0ms ease-in-out;
   --animation-1: 300ms 300ms ease-in-out;
   --animation-2: 300ms 600ms ease-in-out;
+  --animation-2-5: 150ms 750ms ease-in-out;
   --animation-3: 300ms 900ms ease-in-out;
 
   --bezel-dimension: min(80svw, 50svh);
@@ -50,12 +51,12 @@
   
   background-color: hsl(var(--twc-primary-3));
   overflow: hidden;
-  transition: border-radius var(--animation-2);
+  transition: border-radius var(--animation-2), background-color var(--animation-1);
 }
 
 .container.zoom .view {
   border-radius: 0rem;
-  transition: border-radius var(--animation-1);
+  transition: border-radius var(--animation-1), background-color var(--animation-2-5);
 }
 
 .container .contentView {
@@ -74,7 +75,7 @@
 .container.zoom .contentView {
   opacity: 1;
   translate: 0 -5svh;
-  transition: opacity 150ms 750ms ease-in-out, translate var(--animation-1);
+  transition: opacity var(--animation-2-5), translate var(--animation-1);
   z-index: 40;
 }
 
@@ -156,4 +157,52 @@
   scale: var(--bezel-zoom-scale);
   opacity: 0;
   transition: scale var(--animation-2), opacity var(--animation-3);
+}
+
+@media (max-height: 640px) {
+  .container {
+    --bezel-dimension: min(80svh, 50svw);
+    --bezel-unzoom-translate: calc(-1 * (45svw - (var(--bezel-dimension) / 2))) 0px;
+  }
+
+  .container .frame {
+    width: unset;
+  }
+
+  .container .controls {
+    display: relative;
+    left: unset;
+    bottom: 0;
+    top: 0;
+    right: 0svw;
+    margin: auto;
+    width: calc(90svw - var(--bezel-dimension));
+    height: var(--bezel-dimension);
+  }
+
+  .container.zoom .controls {
+
+  }
+
+  .container.bezel {
+
+  }
+
+  .container.zoom .bezel {
+    translate: 0 0;
+  }
+
+  .container .contentView {
+    right: unset;
+    width: 90svw;
+    height: calc(100svh - 2rem);
+  }
+
+  .container.zoom .contentView {
+    translate: 0 0
+  }
+
+  .container.zoom .view {
+    background-color: theme('colors.neutral.800');
+  }
 }
