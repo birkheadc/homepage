@@ -16,18 +16,9 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   const { outerDivSize, image, isCurrent } = props;
   const wrapperRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    console.log('create card image...');
-  }, []);
-
   const handleReady = (canvas: HTMLCanvasElement) => {
-
-    console.log({ image, width: canvas.getBoundingClientRect().width, height: canvas.getBoundingClientRect().height });
     
-    if (wrapperRef.current == null) {
-      console.log('uh oh wrapper ref is null');
-      return;
-    };
+    if (wrapperRef.current == null) return;
 
     const canvasSize = canvas.getBoundingClientRect();
     const x = canvasSize.width - (outerDivSize.width ?? 0);
