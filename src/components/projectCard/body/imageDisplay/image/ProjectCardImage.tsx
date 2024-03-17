@@ -15,10 +15,6 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   const { outerDivSize, image, isCurrent } = props;
   const wrapperRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(function calculateSizeDif() {
-    init();
-  }, [ wrapperRef, outerDivSize ]);
-
   const init = () => {
     if (wrapperRef.current == null) return;
 
@@ -30,6 +26,10 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
     wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
     wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
   }
+
+  React.useEffect(function calculateSizeDif() {
+    init();
+  }, [ wrapperRef, outerDivSize, init ]);
 
   return (
     <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'hidden')} ref={wrapperRef}>
