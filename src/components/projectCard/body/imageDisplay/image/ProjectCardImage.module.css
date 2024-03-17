@@ -1,5 +1,5 @@
 .image {
-  animation: pan 12000ms linear, fade 12000ms linear;
+  animation: pan 12000ms linear infinite, fade 12000ms linear infinite;
   opacity: 0;
 }
 

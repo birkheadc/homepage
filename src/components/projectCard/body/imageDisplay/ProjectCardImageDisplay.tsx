@@ -13,9 +13,9 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
   const outerDivRef = React.useRef<HTMLDivElement>(null);
 
   // Hack to get around css animation not restarting if the image never changes
-  if (images.length === 1) {
-    images.push(images[0]);
-  }
+  // if (images.length === 1) {
+  //   images.push(images[0]);
+  // }
 
   React.useEffect(function setLoopInterval() {
     if (outerDivRef.current == null) return;

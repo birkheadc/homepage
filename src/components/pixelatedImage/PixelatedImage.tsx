@@ -15,7 +15,7 @@ type PixelatedImageProps = {
   shaderEffect?: ImageProcessShaderEffect,
   ariaLabel?: string,
   ariaHidden?: boolean,
-  onReady?: () => void
+  onReady?: (canvas: HTMLCanvasElement) => void
 }
 
 export default function PixelatedImage(props: PixelatedImageProps): JSX.Element {
@@ -35,11 +35,9 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
 
   React.useEffect(() => {
     (async function processAndDrawNewImageToCanvas() {
-      console.log('start process image...');
       if (image == null || canvasRef.current == null) return;
       await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), pixelLevel, shaderMode, shaderEffect);
-      console.log('done process image');
-      onReady && onReady();
+      onReady && onReady(canvasRef.current);
     })();
   }, [ image, canvasRef, pixelLevel, shaderMode, shaderEffect ]);
 

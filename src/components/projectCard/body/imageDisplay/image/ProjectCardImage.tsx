@@ -16,35 +16,34 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   const { outerDivSize, image, isCurrent } = props;
   const wrapperRef = React.useRef<HTMLDivElement>(null);
 
-  const [ isReady, setReady ] = React.useState<boolean>(false);
-
-  const handleReady = () => {
-    setReady(true);
-    init();
-  }
-
-  const init = () => {
+  const handleReady = (canvas: HTMLCanvasElement) => {
+    console.log({ image, width: canvas.getBoundingClientRect().width, height: canvas.getBoundingClientRect().height });
     if (wrapperRef.current == null) return;
 
-    const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
-
-    const x = wrapperSize.width - outerDivSize.width;
-    const y = wrapperSize.height - outerDivSize.height;
+    // const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
+    const canvasSize = canvas.getBoundingClientRect();
+    const x = canvasSize.width - outerDivSize.width;
+    const y = canvasSize.height - outerDivSize.height;
 
     wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
     wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
   }
 
   React.useEffect(function calculateSizeDif() {
-    init();
-  }, [ wrapperRef, outerDivSize, init ]);
+    // if (wrapperRef.current == null) return;
+
+    // const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
+
+    // const x = wrapperSize.width - outerDivSize.width;
+    // const y = wrapperSize.height - outerDivSize.height;
+
+    // wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
+    // wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
+  }, [ wrapperRef, outerDivSize ]);
 
   return (
-    <>
-      { !isReady && <Spinner />}
-      <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'hidden')} ref={wrapperRef}>
-        <PixelatedImage onReady={handleReady} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
-      </div>
-    </>
+    <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'opacity-0')} ref={wrapperRef}>
+      <PixelatedImage onReady={handleReady} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
+    </div>
   );
 }
