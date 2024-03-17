@@ -22,9 +22,11 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
 
   const handleReady = (canvas: HTMLCanvasElement) => {
     console.log({ image, width: canvas.getBoundingClientRect().width, height: canvas.getBoundingClientRect().height });
-    if (wrapperRef.current == null) return;
+    if (wrapperRef.current == null) {
+      console.log('uh oh wrapper ref is null');
+      return;
+    };
 
-    // const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
     const canvasSize = canvas.getBoundingClientRect();
     const x = canvasSize.width - outerDivSize.width;
     const y = canvasSize.height - outerDivSize.height;
@@ -32,18 +34,6 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
     wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
     wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
   }
-
-  React.useEffect(function calculateSizeDif() {
-    // if (wrapperRef.current == null) return;
-
-    // const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
-
-    // const x = wrapperSize.width - outerDivSize.width;
-    // const y = wrapperSize.height - outerDivSize.height;
-
-    // wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
-    // wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
-  }, [ wrapperRef, outerDivSize ]);
 
   return (
     <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'opacity-0')} ref={wrapperRef}>
