@@ -26,7 +26,7 @@ export default function ThemeSlider(props: ThemeSliderProps): JSX.Element {
       <div className='flex flex-row items-center w-full h-6 overflow-hidden rounded-md border-y-2'>
         {THEMES.map(
           (_theme, index) =>
-          <button role='button' aria-pressed={theme === THEMES[index]} data-theme={_theme} key={`frame-color-buttons-key-${_theme}`} onClick={() => changeTheme(_theme)} className={utils.cn(`w-[7.69%] h-8 bg-gradient-to-br from-primary-1 to-primary-2 hocus:from-primary-2 hocus:to-primary-1 hocus:border-2 hocus:outline-none`, index === 0 ? 'border-l-2 rounded-l-md' : '', index === THEMES.length - 1 ? 'border-r-2 rounded-r-md' : '')} tabIndex={tabIndex}><span className='hidden'>{`theme ${theme}`}</span></button>
+          <button role='button' aria-pressed={theme === THEMES[index]} data-theme={_theme} key={`frame-color-buttons-key-${_theme}`} onClick={() => changeTheme(_theme)} className={utils.cn(`w-[7.69%] h-8 bg-gradient-to-br from-primary-1 to-primary-2 hocus:from-primary-3 hocus:to-primary-2 hocus:outline-none`, index === 0 ? 'border-l-2 rounded-l-md' : '', index === THEMES.length - 1 ? 'border-r-2 rounded-r-md' : '')} tabIndex={tabIndex}><span className='hidden'>{`theme ${theme}`}</span></button>
         )}
       </div>
     </div>
