@@ -13,16 +13,19 @@
 }
 
 .container .controls {
+  transform-origin: bottom;
   height: 10rem;
   overflow: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: height var(--animation-2);
+  transition: scale var(--animation-2);
+  scale: 100% 100%;
 }
 
 .container.zoom .controls {
-  height: 0rem;
-  transition: height var(--animation-1);
+  pointer-events: none;
+  scale: 100% 0%;
+  transition: scale var(--animation-1);
 }

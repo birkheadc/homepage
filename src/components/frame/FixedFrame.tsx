@@ -38,7 +38,7 @@ export default function FixedFrame(props: FixedFrameProps): JSX.Element {
   }, [ screenSize, ref ]);
 
   return (
-    <div ref={ref} className={utils.cn(styles.container, isZoomedIn ? styles.zoom : '')}>
+    <div ref={ref} className={utils.cn('bg-gradient-to-br shadow-3xl', skinStyle, styles.container, isZoomedIn ? styles.zoom : '')}>
       <div className={styles.contentView}>
         <div className={styles.content}>
           { children }
@@ -55,7 +55,7 @@ export default function FixedFrame(props: FixedFrameProps): JSX.Element {
 
       </div>
       <div className={styles.controls}>
-        <FocusTrap active={!isZoomedIn}>
+        <FocusTrap active={!isZoomedIn} focusTrapOptions={{ allowOutsideClick: true }}>
           <FocusTrapChild>
             <Controls />
           </FocusTrapChild>
@@ -77,10 +77,9 @@ const SKIN_STYLES: { [key: string]: string } = {
 function calculateCSSVariablesFromScreenSize(size: { width: number, height: number } ): { bezelDimension: string, bezelZoomScale: string, bezelUnzoomTranslate: string } {
   
   const bezelDimension = Math.min((size.width * 0.8), (size.height * 0.5));
-  const bezelZoomScaleX = (size.width / bezelDimension) * 100;
+  const bezelZoomScaleX = (Math.ceil(size.width / bezelDimension)) * 100;
   const bezelZoomScaleY = ((size.height * 0.90) / bezelDimension) * 100;
 
-  const bezelUnzoomTranslate = 0;
   return {
     bezelDimension: `${bezelDimension}px`,
     bezelZoomScale: `${bezelZoomScaleX}% ${bezelZoomScaleY}%`,
