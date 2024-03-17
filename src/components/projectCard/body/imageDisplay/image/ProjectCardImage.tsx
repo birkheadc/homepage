@@ -16,6 +16,10 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   const wrapperRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(function calculateSizeDif() {
+    init();
+  }, [ wrapperRef, outerDivSize ]);
+
+  const init = () => {
     if (wrapperRef.current == null) return;
 
     const wrapperSize = { width: wrapperRef.current.getBoundingClientRect().width, height: wrapperRef.current.getBoundingClientRect().height };
@@ -25,11 +29,11 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
 
     wrapperRef.current.style.setProperty('--translate-x', `-${x}px`);
     wrapperRef.current.style.setProperty('--translate-y', `-${y}px`);
-  }, [ wrapperRef, outerDivSize ]);
+  }
 
   return (
     <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'hidden')} ref={wrapperRef}>
-      <PixelatedImage img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1}  />
+      <PixelatedImage onReady={init} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
     </div>
   );
 }

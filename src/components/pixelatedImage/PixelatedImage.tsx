@@ -14,12 +14,13 @@ type PixelatedImageProps = {
   pixelLevel: number,
   shaderEffect?: ImageProcessShaderEffect,
   ariaLabel?: string,
-  ariaHidden?: boolean
+  ariaHidden?: boolean,
+  onReady?: () => void
 }
 
 export default function PixelatedImage(props: PixelatedImageProps): JSX.Element {
 
-  const { className, style, img, shaderMode, pixelLevel, shaderEffect, ariaLabel, ariaHidden } = props;
+  const { className, style, img, shaderMode, pixelLevel, shaderEffect, ariaLabel, ariaHidden, onReady } = props;
 
   const [image, setImage] = React.useState<HTMLImageElement | null>(null);
   const { getThemeColors } = useTheme();
@@ -36,6 +37,7 @@ export default function PixelatedImage(props: PixelatedImageProps): JSX.Element 
     (async function processAndDrawNewImageToCanvas() {
       if (image == null || canvasRef.current == null) return;
       await utils.image.processAndDrawImageToCanvas(image, canvasRef.current, getThemeColors(), pixelLevel, shaderMode, shaderEffect);
+      onReady && onReady();
     })();
   }, [ image, canvasRef, pixelLevel, shaderMode, shaderEffect ]);
 
