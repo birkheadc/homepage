@@ -18,7 +18,7 @@ export default function ProjectCardImageDisplay(props: ProjectCardImageDisplayPr
   }
 
   React.useEffect(function setLoopInterval() {
-    if (outerDivRef == null) return;
+    if (outerDivRef.current == null) return;
     const interval = setInterval(() => {
 
       setCurrent(c => {
