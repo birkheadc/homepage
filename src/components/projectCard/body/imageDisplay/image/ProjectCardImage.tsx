@@ -6,7 +6,7 @@ import styles from './ProjectCardImage.module.css';
 import Spinner from '../../../../spinner/Spinner';
 
 type ProjectCardImageProps = {
-  outerDivSize: { width?: number, height?: number },
+  outerDivSize: { width: number, height: number },
   image: string,
   isCurrent: boolean
 }
@@ -40,7 +40,7 @@ export default function ProjectCardImage(props: ProjectCardImageProps): JSX.Elem
   }, [ outerDivSize, canvasSize, wrapperRef ]);
 
   return (
-    <div className={utils.cn('bg-primary-0 absolute top-0 left-0', isCurrent ? styles.image : 'opacity-0')} ref={wrapperRef}>
+    <div className={utils.cn('absolute top-0 left-0', isCurrent ? styles.image : 'opacity-0')} ref={wrapperRef}>
       <PixelatedImage onReady={handleReady} img={image} shaderMode={ImageProcessShaderMode.NORMAL} pixelLevel={1} />
     </div>
   );
