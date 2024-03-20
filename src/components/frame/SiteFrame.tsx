@@ -23,8 +23,6 @@ export default function SiteFrame(props: SiteFrameProps): JSX.Element {
 
   const skinStyle = SKIN_STYLES[skin];
 
-  React.useEffect(() => {console.log('frame')});
-
   return (
     <div className={utils.cn(styles.frame, isZoomedIn && styles.zoom)}>
       <div className={utils.cn('bg-gradient-to-br shadow-3xl', skinStyle, styles.outer)}>

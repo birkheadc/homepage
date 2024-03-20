@@ -17,7 +17,6 @@ export default function useLanguage(): { language: string, changeLanguage: (lang
   }, []);
 
   const changeLanguage = (language: string) => {
-    console.log({language});
     let searchParamsString = '?';
     searchParams.forEach((value, key) => searchParamsString = searchParamsString.concat(`${key}=${value}&`));
     router.push(pathname + searchParamsString, { locale: language });
