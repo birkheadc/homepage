@@ -24,9 +24,3 @@ export default function useLanguage(): { language: string, changeLanguage: (lang
 
   return { language, changeLanguage }
 }
-
-// export default function useLanguage(): string | undefined {
-//   if (typeof window === "undefined") return '';
-//   const html = document.documentElement;
-//   return html.getAttribute('lang') ?? 'en';
-// }
